@@ -95,6 +95,9 @@ sudo apt-get install -y wayland-protocols
 sudo apt-get install -y xdg-desktop-portal
 sudo apt-get install -y xwayland
 sudo apt-get install -y bc
+sudo apt-get install -y qt6-quick3d-dev
+sudo apt-get install -y qt6-declarative-dev
+sudo apt-get install -y qt6-wayland-dev
 
 
 
@@ -116,6 +119,7 @@ sudo apt-get install -y libsdbus-c++-dev
 ./scripts/hyprlock.sh
 ./scripts/hyprland-protocols.sh
 ./scripts/hypridle.sh
+./scripts/hyprqtutils.sh
 
 wayland_sessions_dir=/usr/share/wayland-sessions
 [ ! -d "$wayland_sessions_dir" ] && { printf "$CAT - $wayland_sessions_dir not found, creating...\n"; sudo mkdir -p "$wayland_sessions_dir" 2>&1 | tee -a "$LOG"; }
