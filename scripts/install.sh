@@ -98,7 +98,6 @@ sudo apt-get install -y bc
 
 
 
-
 # hyprwm
 sudo apt-get install -y libdisplay-info-dev
 sudo apt-get install -y libpugixml-dev
