@@ -15,4 +15,6 @@ sudo apt-get install -y libsdbus-c++-dev
 ./hyprgraphics.sh
 ./hyprland.sh
 ./hyprlock.sh
+./hyprland-protocols.sh
+./hypridle.sh
 
