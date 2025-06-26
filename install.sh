@@ -107,13 +107,17 @@ sudo apt-get install -y libxcb-errors-dev
 sudo apt-get install -y libtomlplusplus-dev
 sudo apt-get install -y libsdbus-c++-dev
 
-./hyprlang.sh
-./hyprwayland-scanner.sh
-./hyprutils.sh
-./aquamarine.sh
-./hyprgraphics.sh
-./hyprland.sh
-./hyprlock.sh
-./hyprland-protocols.sh
-./hypridle.sh
+./scripts/hyprlang.sh
+./scripts/hyprwayland-scanner.sh
+./scripts/hyprutils.sh
+./scripts/aquamarine.sh
+./scripts/hyprgraphics.sh
+./scripts/hyprland.sh
+./scripts/hyprlock.sh
+./scripts/hyprland-protocols.sh
+./scripts/hypridle.sh
+
+wayland_sessions_dir=/usr/share/wayland-sessions
+[ ! -d "$wayland_sessions_dir" ] && { printf "$CAT - $wayland_sessions_dir not found, creating...\n"; sudo mkdir -p "$wayland_sessions_dir" 2>&1 | tee -a "$LOG"; }
+sudo cp assets/hyprland.desktop "$wayland_sessions_dir/" 2>&1
 
