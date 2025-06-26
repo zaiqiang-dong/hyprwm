@@ -36,4 +36,4 @@ ninja -C build
 sudo ninja -C build install
 
 cd ..
-# rm -rf Waybar
+rm -rf Waybar
