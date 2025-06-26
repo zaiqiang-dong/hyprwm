@@ -7,7 +7,6 @@ sudo apt-get install -y gobject-introspection
 sudo apt-get install -y libgirepository1.0-dev
 sudo apt-get install -y libpulse-dev
 sudo apt-get install -y libnl-3-dev
-sudo apt-get install -y libappindicator3-1
 sudo apt-get install -y libdbusmenu-gtk3-dev
 sudo apt-get install -y libmpdclient-dev
 sudo apt-get install -y libsndio-dev
