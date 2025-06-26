@@ -5,3 +5,5 @@ git clone --recursive https://github.com/hyprwm/Hyprland
 cd Hyprland
 git checkout $tag
 make all && sudo make install
+cd ..
+rm -rf Hyprland

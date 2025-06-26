@@ -9,3 +9,5 @@ git checkout $tag
 cmake -DCMAKE_INSTALL_PREFIX=/usr -B build
 cmake --build build -j `nproc`
 sudo cmake --install build
+cd ..
+rm -rf hyprwayland-scanner
