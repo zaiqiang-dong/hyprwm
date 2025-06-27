@@ -124,9 +124,9 @@ sudo apt-get install -y libspa-0.2-dev
 ./scripts/hyprland-protocols.sh
 ./scripts/hypridle.sh
 ./scripts/hyprqtutils.sh
-./scripts/uwsm.sh
-./scripts/xdph.sh
 ./scripts/theme.sh
+./scripts/xdph.sh
+./scripts/uwsm.sh
 
 
 cp -r ./config/* ~/.config/
