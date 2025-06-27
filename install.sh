@@ -131,9 +131,9 @@ sudo apt-get install -y libspa-0.2-dev
 
 cp -r ./config/* ~/.config/
 
-if lspci -k | grep -A 2 -E "(VGA|3D)" | grep -qi "nvidia"; then
-    echo "use nvidia gpu"
-    ./scripts/nvidia.sh
-    cp ./config/hypr/nvidia.conf ~/.config/hypr/gpu.conf
-fi
+# if lspci -k | grep -A 2 -E "(VGA|3D)" | grep -qi "nvidia"; then
+#     echo "use nvidia gpu"
+#     ./scripts/nvidia.sh
+#     cp ./config/hypr/nvidia.conf ~/.config/hypr/gpu.conf
+# fi
 
