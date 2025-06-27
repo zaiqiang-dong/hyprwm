@@ -109,6 +109,7 @@ sudo apt-get install -y libsdbus-c++-dev
 sudo apt-get install -y libzip-dev
 sudo apt-get install -y librsvg2-dev
 sudo apt-get install -y libre2-dev
+sudo apt-get install -y libspa-0.2-dev
 
 ./scripts/waybar.sh
 ./scripts/rofi.sh
@@ -124,6 +125,7 @@ sudo apt-get install -y libre2-dev
 ./scripts/hypridle.sh
 ./scripts/hyprqtutils.sh
 ./scripts/uwsm.sh
+./scripts/xdph.sh
 ./scripts/theme.sh
 
 
