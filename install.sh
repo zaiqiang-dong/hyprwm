@@ -123,5 +123,6 @@ sudo apt-get install -y libre2-dev
 ./scripts/hyprland-protocols.sh
 ./scripts/hypridle.sh
 ./scripts/hyprqtutils.sh
+./scripts/uwsm.sh
 
 cp -r ./config/* ~/.config/
