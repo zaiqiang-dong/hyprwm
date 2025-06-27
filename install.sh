@@ -110,6 +110,8 @@ sudo apt-get install -y libxcb-errors-dev
 sudo apt-get install -y libtomlplusplus-dev
 sudo apt-get install -y libsdbus-c++-dev
 
+./scripts/waybar.sh
+./scripts/rofi.sh
 ./scripts/hyprlang.sh
 ./scripts/hyprwayland-scanner.sh
 ./scripts/hyprutils.sh
