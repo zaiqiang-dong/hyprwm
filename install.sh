@@ -126,4 +126,10 @@ sudo apt-get install -y libre2-dev
 ./scripts/uwsm.sh
 ./scripts/theme.sh
 
+if lspci -k | grep -A 2 -E "(VGA|3D)" | grep -qi "nvidia"; then
+    echo "use nvidia gpu"
+    ./scripts/nvidia.sh
+    cp ./config/hypr/nvidia.conf ./config/hypr/gpu.conf
+fi
+
 cp -r ./config/* ~/.config/
