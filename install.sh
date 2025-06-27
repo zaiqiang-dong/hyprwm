@@ -124,5 +124,6 @@ sudo apt-get install -y libre2-dev
 ./scripts/hypridle.sh
 ./scripts/hyprqtutils.sh
 ./scripts/uwsm.sh
+./scripts/theme.sh
 
 cp -r ./config/* ~/.config/
