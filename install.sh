@@ -98,10 +98,7 @@ sudo apt-get install -y bc
 sudo apt-get install -y qt6-quick3d-dev
 sudo apt-get install -y qt6-declarative-dev
 sudo apt-get install -y qt6-wayland-dev
-
-
-
-# hyprwm
+sudo apt-get install -y libmagic-dev
 sudo apt-get install -y libdisplay-info-dev
 sudo apt-get install -y libpugixml-dev
 sudo apt-get install -y libudis86-dev
@@ -112,9 +109,9 @@ sudo apt-get install -y libsdbus-c++-dev
 
 ./scripts/waybar.sh
 ./scripts/rofi.sh
+./scripts/hyprutils.sh
 ./scripts/hyprlang.sh
 ./scripts/hyprwayland-scanner.sh
-./scripts/hyprutils.sh
 ./scripts/aquamarine.sh
 ./scripts/hyprgraphics.sh
 ./scripts/hyprland.sh
