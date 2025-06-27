@@ -106,6 +106,8 @@ sudo apt-get install -y libxcursor-dev
 sudo apt-get install -y libxcb-errors-dev
 sudo apt-get install -y libtomlplusplus-dev
 sudo apt-get install -y libsdbus-c++-dev
+sudo apt-get install -y libzip-dev
+sudo apt-get install -y librsvg2-dev
 
 ./scripts/waybar.sh
 ./scripts/rofi.sh
