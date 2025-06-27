@@ -3,7 +3,7 @@
 sudo apt install libpugixml-dev
 
 tag=v0.4.4
-git clone https://github.com/hyprwm/hyprlang.git
+git clone https://github.com/hyprwm/hyprwayland-scanner.git
 cd hyprwayland-scanner
 git checkout $tag
 cmake -DCMAKE_INSTALL_PREFIX=/usr -B build
