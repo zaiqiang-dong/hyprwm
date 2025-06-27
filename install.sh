@@ -114,6 +114,7 @@ sudo apt-get install -y libsdbus-c++-dev
 ./scripts/hyprwayland-scanner.sh
 ./scripts/aquamarine.sh
 ./scripts/hyprgraphics.sh
+./scripts/hyprcursor.sh
 ./scripts/hyprland.sh
 ./scripts/hyprlock.sh
 ./scripts/hyprland-protocols.sh
