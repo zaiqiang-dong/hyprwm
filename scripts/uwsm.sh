@@ -10,4 +10,4 @@ meson setup --prefix=/usr/local -Duuctl=enabled -Dfumon=enabled -Duwsm-app=enabl
 meson install -C build
 
 cd ..
-rm uwsm
+rm -rf uwsm
