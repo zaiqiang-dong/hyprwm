@@ -110,6 +110,7 @@ sudo apt-get install -y libzip-dev
 sudo apt-get install -y librsvg2-dev
 sudo apt-get install -y libre2-dev
 sudo apt-get install -y libspa-0.2-dev
+sudo apt-get install -y sway-notification-center
 
 ./scripts/waybar.sh
 ./scripts/rofi.sh
