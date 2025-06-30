@@ -2,7 +2,7 @@
 
 
 tag=v1.3.9
-git clone --recursive https://github.com/hyprwm/xdg-desktop-portal-hyprland
+git clone --recursive https://github.com/hyprwm/xdg-desktop-portal-hyprland.git
 cd xdg-desktop-portal-hyprland/
 git checkout $tag
 
