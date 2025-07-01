@@ -115,6 +115,7 @@ sudo apt-get install -y slurp
 sudo apt-get install -y wl-clipboard
 sudo apt-get install -y grim
 sudo apt-get install -y xdg-desktop-portal-phosh
+sudo apt-get install -y lm-sensors
 
 ./scripts/waybar.sh
 ./scripts/rofi.sh
