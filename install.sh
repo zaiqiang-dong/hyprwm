@@ -111,6 +111,9 @@ sudo apt-get install -y librsvg2-dev
 sudo apt-get install -y libre2-dev
 sudo apt-get install -y libspa-0.2-dev
 sudo apt-get install -y sway-notification-center
+sudo apt-get install -y slurp
+sudo apt-get install -y wl-clipboard
+sudo apt-get install -y grim
 
 ./scripts/waybar.sh
 ./scripts/rofi.sh
