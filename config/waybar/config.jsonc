@@ -27,8 +27,8 @@
     "format": "{icon}",
     "on-click": "activate",
     "persistent-workspaces": {
-    "DP-5":[1,2,3,4,5,],
-    "DP-6":[6,7,8,9,10]
+    "DP-5":[1,2,3,4,5],
+    "DP-6":[6,7,8,9,10,11]
     },
   },
   "custom/lock": {
