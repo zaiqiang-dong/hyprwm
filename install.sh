@@ -116,6 +116,8 @@ sudo apt-get install -y wl-clipboard
 sudo apt-get install -y grim
 sudo apt-get install -y xdg-desktop-portal-phosh
 sudo apt-get install -y lm-sensors
+sudo apt-get install -y cliphist
+sudo apt-get install -y copyq
 
 ./scripts/waybar.sh
 ./scripts/rofi.sh
@@ -133,6 +135,7 @@ sudo apt-get install -y lm-sensors
 ./scripts/theme.sh
 ./scripts/xdph.sh
 ./scripts/uwsm.sh
+./scripts/worksapce.sh
 
 
 cp -r ./config/* ~/.config/

@@ -1,2 +1,4 @@
 configuration {
 }
+
+@theme "~/.config/rofi/theme/style_7.rasi"
