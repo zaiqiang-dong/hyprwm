@@ -136,6 +136,7 @@ sudo apt-get install -y copyq
 ./scripts/xdph.sh
 ./scripts/uwsm.sh
 ./scripts/worksapce.sh
+./scripts/satty.sh
 
 
 cp -r ./config/* ~/.config/
