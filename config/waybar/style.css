@@ -66,8 +66,7 @@
 
 #custpm-temperature.critical,
 #pulseaudio.muted {
-  color: #FF0000;
-  padding-top: 0;
+  color: #ff6f00;
 }
 
 /* 鼠标悬停变亮一点 */
