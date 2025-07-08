@@ -1,12 +1,13 @@
-@define-color noti-border-color rgba(62, 175, 124, 1.0);
+@define-color noti-border-color rgba(65, 175, 124, 1.0);
 @define-color noti-bg rgba(28, 28, 28, 1.0);
 @define-color noti-bg-alt rgba(28, 28, 28, 1.0);
 @define-color noti-bg-hover rgba(28, 28, 28, 1.0);
 @define-color text-color rgba(148, 148, 148, 1.0);
 
 * {
-    font-family: "JetBrains Mono Nerd Font";
+    font-family: "JetBrains Mono Nerd Font", "Kaiti SC";
     font-weight: bold;
+    font-size: 14px;
 }
 
 .control-center .notification-row:focus,
@@ -23,6 +24,7 @@
 
 .notification {
 	border-radius: 10px;
+  font-size: 16px;
 }
 
 .notification-content{
@@ -124,7 +126,7 @@
 }
 
 .body-image {
-    margin-top: 6px;
+    margin: 6px;
     color: @text-color;
     border-radius: 10px
 }
@@ -147,7 +149,7 @@
 }
 
 .body {
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: bold;
     background: transparent;
     color: @text-color;
@@ -182,7 +184,7 @@
     background: @noti-bg-alt;
     padding: 3px 6px;
     margin: 5px;
-    font-size: 1rem;
+    font-size: 1.1rem;
     border-radius: 10px;
 }
 
