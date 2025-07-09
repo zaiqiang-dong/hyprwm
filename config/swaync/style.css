@@ -5,7 +5,7 @@
 @define-color text-color rgba(148, 148, 148, 1.0);
 
 * {
-  font-family: "JetBrains Mono Nerd Font", "Kaiti SC";
+  font-family: "JetBrains Mono Nerd Font";
 }
 
 .control-center .notification-row:focus,
@@ -34,7 +34,6 @@
 }
 
 .notification-action {
-  font-size: 1.0em;
   border: none;
 }
 
