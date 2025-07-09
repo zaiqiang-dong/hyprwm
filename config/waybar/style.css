@@ -95,7 +95,7 @@
 }
 
 #workspaces button.active {
-  background-color: #3eaf7c; /* 蓝色高亮 */
+  background-color: rgba(64, 175, 124, 1.0); /* 蓝色高亮 */
   color: #ffffff;
   padding: 2px 8px;
   margin: 0 2px;
