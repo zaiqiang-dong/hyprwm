@@ -2,7 +2,7 @@
 * {
   font-family: "JetBrains Mono Nerd Font", "Kaiti SC";
   font-weight: bold;
-  font-size: 18px;
+  font-size: 19px;
   color: #949494;
 }
 
@@ -88,6 +88,7 @@
 
 /* 工作区激活状态高亮 */
 #workspaces button:hover{
+    font-size: 18px;
   background-color: rgba(28,28,28, 0.0);
   padding: 2px 8px;
   margin: 0 2px;
@@ -96,7 +97,7 @@
 
 #workspaces button.active {
   border-bottom: 4px solid rgba(64, 175, 124, 1.0);
-  padding: 2px 8px;
+  padding:2px 4px 2px 4px;
   margin: 0 2px;
   border-radius: 0px;
 }
@@ -105,7 +106,7 @@
 #workspaces button {
   background: transparent;
   border: none;
-  padding: 2px 8px;
+  padding: 2px 4px 6px 4px;
   margin: 0 2px;
   font-weight: bold;
 }
