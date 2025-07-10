@@ -72,6 +72,7 @@
 
 /* 未激活工作区按钮 */
 #workspaces button {
+  border: none;
   padding: 3px 2px 0px 2px;
   margin: 0 2px;
   font-weight: bold;
