@@ -3,9 +3,7 @@
   "position": "top",
   "height": 32,
   "spacing": 0,
-  "modules-left": [
-    "hyprland/workspaces",
-  ],
+  "modules-left": ["hyprland/workspaces"],
   "modules-center": ["hyprland/window"],
   "modules-right": [
     "network",
@@ -20,20 +18,20 @@
     "tray",
     "custom/lock",
     "custom/reboot",
-    "custom/power"
+    "custom/power",
   ],
   "hyprland/workspaces": {
     "disable-scroll": false,
     "format": "{icon}",
     "on-click": "activate",
     "persistent-workspaces": {
-    "DP-5":[1,2,3,4,5],
-    "DP-6":[6,7,8,9,10,11]
+      "DP-5": [1, 2, 3, 4, 5],
+      "DP-6": [6, 7, 8, 9, 10, 11],
     },
     "format-icons": {
-	"10":"0",
-	"11": "󰖂",
-    }
+      "10": "0",
+      "11": "󰖂",
+    },
   },
   // "custom/lock": {
   // "format": "<span color='#00FFFF'>  </span>",
@@ -60,18 +58,18 @@
     "format-linked": "<span color='#FFA500'>󱘖 </span>{ifname} (No IP) ",
     "format-disconnected": "<span color='#FF4040'> </span>Disconnected ",
     "format-alt": "<span color='#00FFFF'>󰤨 </span>{signalStrength}% ",
-    "interval": 1
+    "interval": 1,
   },
   "battery": {
     "states": {
       "warning": 30,
-      "critical": 15
+      "critical": 15,
     },
     "format": "<span color='#28CD41'> {icon} </span>{capacity}% ",
     "format-charging": " 󱐋{capacity}%",
-	  "interval": 1,
+    "interval": 1,
     "format-icons": ["󰂎", "󰁼", "󰁿", "󰂁", "󰁹"],
-    "tooltip": true
+    "tooltip": true,
   },
   "pulseaudio": {
     "format": "<span color='#00FF7F'>{icon}</span>{volume}% ",
@@ -86,40 +84,40 @@
       "default": [
         "<span color='#808080'> </span>",
         "<span color='#FFFF66'> </span>",
-        "<span color='#00FF7F'>  </span>"
-      ]
+        "<span color='#00FF7F'>  </span>",
+      ],
     },
     "on-click-right": "pavucontrol -t 3",
     "on-click": "pactl -- set-sink-mute 0 toggle",
     "tooltip": true,
-    "tooltip-format": "当前系统声音: {volume}%"
+    "tooltip-format": "当前系统声音: {volume}%",
   },
   "custom/temperature": {
     "exec": "sensors | awk '/^Package id 0:/ {print int($4)}'",
     "format": "<span color='#FFA500'> </span>{}°C ",
     "interval": 5,
     "tooltip": true,
-    "tooltip-format": "当前 CPU 温度: {}°C"
+    "tooltip-format": "当前 CPU 温度: {}°C",
   },
   "memory": {
     "format": "<span color='#8A2BE2'>󰍛 </span>{used:0.1f}G/{total:0.1f}G ",
     "tooltip": true,
-    "tooltip-format": "当前内存占比: {used:0.2f}G/{total:0.2f}G"
+    "tooltip-format": "当前内存占比: {used:0.2f}G/{total:0.2f}G",
   },
   "cpu": {
     "format": "<span color='#FF9F0A'>󰻠 </span>{usage}% ",
-    "tooltip": true
+    "tooltip": true,
   },
   "clock": {
     "interval": 1,
     "timezone": "Asia/Chengdu",
     "format": "<span color='#BF00FF'>󰔛 </span>{:%m-%d %H:%M} ",
     "tooltip": true,
-    "tooltip-format": "{:%Y年%m月%d日, %A}"
+    "tooltip-format": "{:%Y年%m月%d日, %A}",
   },
   "tray": {
     "icon-size": 16,
-    "spacing": 6
+    "spacing": 6,
   },
   "backlight": {
     "device": "intel_backlight",
@@ -127,12 +125,13 @@
     "tooltip": true,
     "tooltip-format": "当前屏幕亮度: {percent}%",
     "format-icons": [
-      "<span color='#696969'>󰃞 </span>",  // 暗 - 深灰
-      "<span color='#A9A9A9'>󰃝 </span>",  // 中 - 灰
-      "<span color='#FFFF66'>󰃟 </span>",  // 亮 - 柠檬黄
-      "<span color='#FFD700'>󰃠 </span>"   // 最亮 - 金色
-    ]
+      "<span color='#696969'>󰃞 </span>",
+      "<span color='#A9A9A9'>󰃝 </span>",
+      "<span color='#FFFF66'>󰃟 </span>",
+      "<span color='#FFD700'>󰃠 </span>",
+    ],
   },
+
   "bluetooth": {
     "format": "<span color='#00BFFF'> </span>{status} ",
     "format-connected": "<span color='#00BFFF'> </span>{device_alias} ",
@@ -140,7 +139,6 @@
     "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
     "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
     "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
-    "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%"
-  }
+    "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%",
+  },
 }
-
