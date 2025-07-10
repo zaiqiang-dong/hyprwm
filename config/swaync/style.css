@@ -170,10 +170,11 @@
 .widget-volume trough {
 }
 
-.widget-buttons-grid > flowbox > flowboxchild > button:checked {
-}
-
-.widget-volume trough slider {
+.widget-volume trough highlight {
+  padding: 4px;
+  background: @noti-border-color;
+  border: 2px solid @noti-border-color;
+  border-radius: 10px;
 }
 
 .per-app-volume {
