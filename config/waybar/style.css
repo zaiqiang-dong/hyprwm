@@ -63,7 +63,7 @@
 
 #workspaces button.active {
   border-top: 3px solid rgba(64, 175, 124, 1);
-  padding: 0px 2px 0px 2px;
+  padding: 0px 4px 0px 4px;
   margin: 0 2px;
   border-radius: 0px;
 }
@@ -71,7 +71,7 @@
 /* 未激活工作区按钮 */
 #workspaces button {
   border: none;
-  padding: 3px 2px 0px 2px;
+  padding: 3px 4px 0px 4px;
   margin: 0 2px;
   font-weight: bold;
 }
