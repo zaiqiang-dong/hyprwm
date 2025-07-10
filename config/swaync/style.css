@@ -82,6 +82,8 @@
 }
 
 .control-center {
+  background-color: @noti-bg;
+  border: 1px solid @noti-border-color;
 }
 
 .control-center-list {
@@ -113,6 +115,7 @@
 }
 
 .widget-dnd > switch:checked {
+  background-color: @noti-border-color;
 }
 
 .widget-dnd > switch slider {
@@ -162,12 +165,24 @@
 }
 
 .widget-volume > box > button {
+  background-color: @noti-border-color;
+}
+.widget-volume trough {
+}
+
+.widget-buttons-grid > flowbox > flowboxchild > button:checked {
+}
+
+.widget-volume trough slider {
 }
 
 .per-app-volume {
 }
 
 .widget-backlight {
+}
+
+.control-center-dnd:checked {
 }
 
 .low {
