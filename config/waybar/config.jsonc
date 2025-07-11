@@ -3,8 +3,8 @@
   "position": "top",
   "height": 32,
   "spacing": 0,
-  "modules-left": ["hyprland/workspaces"],
-  "modules-center": ["hyprland/window"],
+  "modules-left": ["hyprland/workspaces", "hyprland/window"],
+  "modules-center": [],
   "modules-right": [
     "network",
     "battery",
@@ -16,9 +16,7 @@
     "cpu",
     "clock",
     "tray",
-    "custom/lock",
-    "custom/reboot",
-    "custom/power",
+    "custom/notify",
   ],
   "hyprland/workspaces": {
     "disable-scroll": false,
@@ -32,6 +30,12 @@
       "10": "0",
       "11": "󰖂",
     },
+  },
+  "custom/notify": {
+  "format": "<span color='#3eaf7c'>   </span>",
+  "on-click": "swaync-client -t -sw",
+  "tooltip": true,
+  "tooltip-format": "通知"
   },
   // "custom/lock": {
   // "format": "<span color='#00FFFF'>  </span>",
@@ -82,7 +86,7 @@
       "portable": "<span color='#00FFFF'> </span>",
       "car": "<span color='#FFA500'> </span>",
       "default": [
-        "<span color='#808080'> </span>",
+        "<span color='#00FFFF'> </span>",
         "<span color='#FFFF66'> </span>",
         "<span color='#00FF7F'>  </span>",
       ],
