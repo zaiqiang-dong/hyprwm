@@ -32,10 +32,10 @@
     },
   },
   "custom/notify": {
-  "format": "<span color='#3EAF7C'>   </span>",
-  "on-click": "swaync-client -t -sw",
-  "tooltip": true,
-  "tooltip-format": "通知"
+    "format": "<span color='#3EAF7C'>   </span>",
+    "on-click": "swaync-client -t -sw",
+    "tooltip": true,
+    "tooltip-format": "通知",
   },
   // "custom/lock": {
   // "format": "<span color='#3EAF7C'>  </span>",
@@ -58,7 +58,7 @@
   "network": {
     "format-wifi": "<span color='#3EAF7C'>󰤨 </span>{essid} ",
     "format-ethernet": "<span color='#3EAF7C'>󰱓 </span>Wired ",
-    "tooltip-format": "<span color='#3EAF7C'>󰅢 </span>{bandwidthDownBytes}",
+    "tooltip-format": "<span color='#3EAF7C'>  </span>{bandwidthUpBytes}  <span color='#3EAF7C'>  </span>{bandwidthDownBytes}",
     "format-linked": "<span color='#3EAF7C'>󱘖 </span>{ifname} (No IP) ",
     "format-disconnected": "<span color='#3EAF7C'> </span>Disconnected ",
     "format-alt": "<span color='#3EAF7C'>󰤨 </span>{signalStrength}% ",
