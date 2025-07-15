@@ -37,10 +37,13 @@
 
 .notification-action {
   border: none;
+  border-top: 1px solid @noti-border-color;
+  border-right: 1px solid @noti-border-color;
 }
 
 .notification-default-action:hover,
 .notification-action:hover {
+  background-color: #262626;
 }
 
 .notification-default-action {
