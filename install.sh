@@ -138,6 +138,7 @@ sudo apt-get install -y libqt5printsupport5t64
 ./scripts/uwsm.sh
 ./scripts/worksapce.sh
 ./scripts/satty.sh
+./scripts/sceensave.sh
 
 
 cp -r ./config/* ~/.config/
