@@ -23,8 +23,8 @@
     "format": "{icon}",
     "on-click": "activate",
     "persistent-workspaces": {
-      "HDMI-A-1": [1, 2, 3, 4, 5],
-      "DP-1": [6, 7, 8, 9, 10, 11],
+      "DP-1": [1, 2, 3, 4, 5],
+      "HDMI-A-1": [6, 7, 8, 9, 10, 11],
     },
     "format-icons": {
       "10": "0",
