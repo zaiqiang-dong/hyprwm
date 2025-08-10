@@ -3,7 +3,7 @@
   "position": "top",
   "height": 32,
   "spacing": 0,
-  "modules-left": ["hyprland/workspaces", "hyprland/window"],
+  "modules-left": ["hyprland/workspaces", "custom/workspace-windows","hyprland/window"],
   "modules-center": [],
   "modules-right": [
     "network",
@@ -37,6 +37,14 @@
     "tooltip": true,
     "tooltip-format": "通知",
   },
+
+  "custom/workspace-windows": {
+    "exec": "hyprctl activeworkspace -j | jq -r '.windows'",
+    "format": "[{}]",
+    "interval": 1,
+    "tooltip": false,
+  },
+
   // "custom/lock": {
   // "format": "<span color='#3EAF7C'>  </span>",
   // "on-click": "hyprlock",
