@@ -114,7 +114,7 @@ sudo apt-get install -y sway-notification-center
 sudo apt-get install -y slurp
 sudo apt-get install -y wl-clipboard
 sudo apt-get install -y grim
-sudo apt-get install -y xdg-desktop-portal-phosh
+# sudo apt-get install -y xdg-desktop-portal-phosh
 sudo apt-get install -y lm-sensors
 sudo apt-get install -y cliphist
 sudo apt-get install -y copyq
