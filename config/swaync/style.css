@@ -122,10 +122,12 @@
 }
 
 .widget-dnd > switch:checked {
+  border: 1px solid @noti-border-color;
   background-color: @noti-border-color;
 }
 
 .widget-dnd > switch slider {
+  border: 1px solid #2c2c2c;
   margin: 1px;
 }
 
@@ -189,6 +191,18 @@
 }
 
 .widget-backlight {
+}
+
+.widget-backlight > box > button {
+  background-color: @noti-border-color;
+}
+.widget-backlight trough {
+}
+.widget-backlight trough highlight {
+  padding: 4px;
+  background: @noti-border-color;
+  border: 2px solid @noti-border-color;
+  border-radius: 10px;
 }
 
 .control-center-dnd:checked {
