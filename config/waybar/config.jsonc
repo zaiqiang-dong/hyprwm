@@ -6,9 +6,7 @@
   "modules-left": ["hyprland/workspaces", "custom/workspace-windows","hyprland/window"],
   "modules-center": [],
   "modules-right": [
-    "network",
     "battery",
-    "bluetooth",
     "pulseaudio",
     "backlight",
     "custom/temperature",
