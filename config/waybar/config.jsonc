@@ -74,7 +74,7 @@
       "critical": 15,
     },
     "format": "<span color='#3EAF7C'> {icon} </span>{capacity}% ",
-    "format-charging": " 󱐋{capacity}%",
+    "format-charging": "<span color='#3EAF7C'>󱘖 </span>{capacity}% ",
     "interval": 1,
     "format-icons": ["󰂎", "󰁼", "󰁿", "󰂁", "󰁹"],
     "tooltip": true,
