@@ -3,3 +3,5 @@
 git clone git@github.com:pipeseroni/pipes.sh.git
 cd pipes.sh
 sudo make install
+cd ..
+rm pipes.sh -rf
