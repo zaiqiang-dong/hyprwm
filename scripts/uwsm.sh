@@ -7,7 +7,7 @@ cd uwsm
 git checkout $tag
 
 meson setup --prefix=/usr/local -Duuctl=enabled -Dfumon=enabled -Duwsm-app=enabled build
-meson install -C build
+sudo meson install -C build
 
 cd ..
 rm -rf uwsm
