@@ -61,8 +61,8 @@
   //   "tooltip-format": "关机"
   // },
   "network": {
-    "format-wifi": "<span color='#3EAF7C'>󱚻 </span> wifi ",
-    "format-ethernet": "<span color='#3EAF7C'>󰱓 </span> wired ",
+    "format-wifi": "<span color='#3EAF7C'>󱚻 </span>wifi ",
+    "format-ethernet": "<span color='#3EAF7C'>󰱓 </span>wired ",
     "tooltip-format": "<span color='#3EAF7C'>󰛶 </span>{bandwidthUpBytes}  <span color='#3EAF7C'>󰛴 </span>{bandwidthDownBytes}",
     "format-linked": "<span color='#3EAF7C'>󱘖 </span>{ifname} (No IP) ",
     "format-disconnected": "<span color='#3EAF7C'>󰅛 </span>Disconnected ",
