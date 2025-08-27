@@ -61,11 +61,11 @@
   //   "tooltip-format": "关机"
   // },
   "network": {
-    "format-wifi": "<span color='#3EAF7C'>󰤨 </span>{essid} ",
-    "format-ethernet": "<span color='#3EAF7C'>󰱓 </span>Wired ",
-    "tooltip-format": "<span color='#3EAF7C'>  </span>{bandwidthUpBytes}  <span color='#3EAF7C'>  </span>{bandwidthDownBytes}",
+    "format-wifi": "<span color='#3EAF7C'>󱚻 </span> {bandwidthDownBytes} ",
+    "format-ethernet": "<span color='#3EAF7C'>󰱓 </span> {bandwidthDownBytes} ",
+    "tooltip-format": "<span color='#3EAF7C'>󰛶 </span>{bandwidthUpBytes}  <span color='#3EAF7C'>󰛴 </span>{bandwidthDownBytes}",
     "format-linked": "<span color='#3EAF7C'>󱘖 </span>{ifname} (No IP) ",
-    "format-disconnected": "<span color='#3EAF7C'> </span>Disconnected ",
+    "format-disconnected": "<span color='#3EAF7C'>󰅛 </span>Disconnected ",
     "format-alt": "<span color='#3EAF7C'>󰤨 </span>{signalStrength}% ",
     "interval": 1,
   },
