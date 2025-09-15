@@ -13,5 +13,10 @@ if [[ host == "NBGT" ]]; then
     cp ./workspace/NBGT/workspace.conf ./config/hypr/workspace.conf
 fi
 
+if [[ host == "NBGB" ]]; then
+    sed -i 's|exec-once = echo \"Xft\.dpi\:192\" \| xrdb -merge|\# exec-once = echo \"Xft\.dpi\:192\" \| xrdb -merge|g' ./config/hypr/env.conf
+    sed -i 's|monitor=,highres,auto,2|monitor=,highres,auto,1|g' ./config/hypr/monitors.conf
+fi
+
 cp -r ./config/* ~/.config/
 git checkout .
