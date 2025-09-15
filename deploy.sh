@@ -9,5 +9,9 @@ if [[ host == "NBJT" ]]; then
     sed -i 's|\"DP-6\"\: \[6, 7, 8, 9, 10, 11\]|\"HDMI-A-1\"\: \[6, 7, 8, 9, 10, 11\]|g' ./config/waybar/config.jsonc
 fi
 
+if [[ host == "NBGT" ]]; then
+    cp ./workspace/NBGT/workspace.conf ./config/hypr/workspace.conf
+fi
+
 cp -r ./config/* ~/.config/
 git checkout .
