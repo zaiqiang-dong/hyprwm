@@ -3,6 +3,7 @@
 host=$(uname -a | cut -d " " -f 2)
 
 if [[ host == "NBJT" ]]; then
+    echo "config host : $host"
     sed -i 's|monitor=,highres,auto,2|monitor = DP-1, 3840x2160@60, 0x0, 2\nmonitor = HDMI-A-1, 3840x2160@60, 1920x0, 2|g' ./config/hypr/monitors.conf
     cp ./workspace/NBJT/workspace.conf ./config/hypr/workspace.conf
     sed -i 's|\"DP-5\"\: \[1, 2, 3, 4, 5\]|\"DP-1\"\: \[1, 2, 3, 4, 5\]|g' ./config/waybar/config.jsonc
@@ -10,10 +11,12 @@ if [[ host == "NBJT" ]]; then
 fi
 
 if [[ host == "NBGT" ]]; then
+    echo "config host : $host"
     cp ./workspace/NBGT/workspace.conf ./config/hypr/workspace.conf
 fi
 
 if [[ host == "NBGB" ]]; then
+    echo "config host : $host"
     sed -i 's|exec-once = echo \"Xft\.dpi\:192\" \| xrdb -merge|\# exec-once = echo \"Xft\.dpi\:192\" \| xrdb -merge|g' ./config/hypr/env.conf
     sed -i 's|monitor=,highres,auto,2|monitor=,highres,auto,1|g' ./config/hypr/monitors.conf
 fi
