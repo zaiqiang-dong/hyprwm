@@ -6,6 +6,7 @@
   "modules-left": ["hyprland/workspaces", "custom/workspace-windows","hyprland/window"],
   "modules-center": [],
   "modules-right": [
+    "clock",
     "battery",
     "pulseaudio",
     "backlight",
@@ -13,7 +14,6 @@
     "memory",
     "cpu",
     "network",
-    "clock",
     "tray",
     "custom/notify",
   ],
@@ -62,7 +62,7 @@
   // },
   "network": {
     "format-wifi": "<span color='#3EAF7C'>󱚻 </span>wifi ",
-    "format-ethernet": "<span color='#3EAF7C'>󰱓 </span>wired ",
+    "format-ethernet": "<span color='#3EAF7C'>󰱓 </span>wired <span color='#3EAF7C'>󰛶</span>{bandwidthUpBytes:>1} <span color='#3EAF7C'>󰛴</span>{bandwidthDownBytes:>1} ",
     "tooltip-format": "<span color='#3EAF7C'>󰛶 </span>{bandwidthUpBytes}  <span color='#3EAF7C'>󰛴 </span>{bandwidthDownBytes}",
     "format-linked": "<span color='#3EAF7C'>󱘖 </span>{ifname} (No IP) ",
     "format-disconnected": "<span color='#3EAF7C'>󰅛 </span>Disconnected ",
@@ -114,7 +114,7 @@
     "tooltip-format": "当前内存占比: {used:0.2f}G/{total:0.2f}G",
   },
   "cpu": {
-    "format": "<span color='#3EAF7C'>󰻠 </span>{usage}% ",
+    "format": "<span color='#3EAF7C'>󰻠 </span>{usage:2}% ",
     "tooltip": true,
   },
   "clock": {
