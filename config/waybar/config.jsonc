@@ -62,7 +62,7 @@
   // },
   "network": {
     "format-wifi": "<span color='#3EAF7C'>󱚻 </span>wifi ",
-    "format-ethernet": "<span color='#3EAF7C'>󰱓 </span>wired <span color='#3EAF7C'>󰛶 </span>{bandwidthUpBytes:>1} <span color='#3EAF7C'>󰛴 </span>{bandwidthDownBytes:>1} ",
+    "format-ethernet": "<span color='#3EAF7C'>󰱓 </span>wired <span color='#3EAF7C'>󰅧 </span>{bandwidthUpBytes:>1} <span color='#3EAF7C'>󰅢 </span>{bandwidthDownBytes:>1} ",
     "tooltip-format": "<span color='#3EAF7C'>󰛶 </span>{bandwidthUpBytes}  <span color='#3EAF7C'>󰛴 </span>{bandwidthDownBytes}",
     "format-linked": "<span color='#3EAF7C'>󱘖 </span>{ifname} (No IP) ",
     "format-disconnected": "<span color='#3EAF7C'>󰅛 </span>Disconnected ",
@@ -120,7 +120,7 @@
   "clock": {
     "interval": 1,
     "timezone": "Asia/Chengdu",
-    "format": "<span color='#3EAF7C'>󰔛 </span>{:%V+%w %m-%d %H:%M:%S} ",
+    "format": "<span color='#3EAF7C'>󱫨 </span>{:%V+%w %m-%d %H:%M:%S} ",
     "tooltip": true,
     "tooltip-format": "{:%Y年%m月%d日 %V周 %A %H:%M:%S}",
   },
