@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-tag=v0.1.4
+tag=v0.1.5
 
 git clone https://github.com/hyprwm/hyprland-qtutils.git
 cd hyprland-qtutils

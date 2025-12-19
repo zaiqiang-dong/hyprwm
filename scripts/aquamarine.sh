@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 sudo apt install libpugixml-dev
-tag=v0.8.0
+tag=v0.10.0
 git clone https://github.com/hyprwm/aquamarine.git
 cd aquamarine
 git checkout $tag

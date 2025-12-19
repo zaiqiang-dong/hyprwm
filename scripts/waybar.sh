@@ -25,7 +25,7 @@ sudo apt-get install -y libpipewire-0.3-dev
 sudo apt-get install -y playerctl
 sudo apt-get install -y libinotify-ocaml-dev
 
-tag=v0.13.0
+tag=v0.14.0
 
 git clone https://github.com/Alexays/Waybar
 cd Waybar

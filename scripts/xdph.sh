@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-tag=v1.3.9
+tag=v1.3.11
 git clone --recursive https://github.com/hyprwm/xdg-desktop-portal-hyprland.git
 cd xdg-desktop-portal-hyprland/
 git checkout $tag

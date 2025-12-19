@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-tag=v0.1.12
+tag=v0.1.13
 git clone https://github.com/hyprwm/hyprcursor.git
 cd hyprcursor
 git checkout %tag

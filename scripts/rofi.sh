@@ -31,8 +31,8 @@ sudo apt-get install -y libxkbcommon-x11-dev
 sudo apt-get install -y ohcount
 sudo apt-get install -y wget
 
-rofi_tag="1.7.8+wayland1"
-wget https://github.com/lbonn/rofi/releases/download/1.7.8%2Bwayland1/rofi-1.7.8+wayland1.tar.gz
+rofi_tag="1.7.9+wayland1"
+wget https://github.com/lbonn/rofi/releases/download/1.7.9%2Bwayland1/rofi-1.7.9+wayland1.tar.gz
 tar xf rofi-$rofi_tag.tar.gz
 cd rofi-$rofi_tag || exit 1
 meson setup build && ninja -C build

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-tag=v0.6.4
+tag=v0.7.0
 
 git clone https://github.com/hyprwm/hyprland-protocols.git
 cd hyprland-protocols
