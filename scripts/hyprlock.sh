@@ -5,7 +5,12 @@ git clone https://github.com/hyprwm/hyprlock.git
 cd hyprlock
 git checkout $tag
 cmake --no-warn-unused-cli -DCMAKE_BUILD_TYPE:STRING=Release -S . -B ./build
-cmake --build ./build --config Release --target hyprlock -j`nproc 2>/dev/null || getconf _NPROCESSORS_CONF`
+cmake --build ./build --config Release --target hyprlock -j$(nproc 2>/dev/null || getconf _NPROCESSORS_CONF)
 sudo cmake --install build
+if [ $? -ne 0 ]; then
+    cd ..
+    rm -rf hyprlock
+    exit 1
+fi
 cd ..
 rm -rf hyprlock

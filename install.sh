@@ -122,24 +122,100 @@ sudo apt-get install -y libqt5printsupport5t64
 sudo apt-get install -y xdg-desktop-portal-kde
 
 ./scripts/waybar.sh
+if [ $? -ne 0 ]; then
+    echo "install waybar failed"
+    exit 1
+fi
 ./scripts/rofi.sh
+if [ $? -ne 0 ]; then
+    echo "install rofi failed"
+    exit 1
+fi
 ./scripts/hyprutils.sh
+if [ $? -ne 0 ]; then
+    echo "install hyprutils failed"
+    exit 1
+fi
 ./scripts/hyprlang.sh
+if [ $? -ne 0 ]; then
+    echo "install hyprlang failed"
+    exit 1
+fi
 ./scripts/hyprwayland-scanner.sh
+if [ $? -ne 0 ]; then
+    echo "install hyprwayland-scanner failed"
+    exit 1
+fi
 ./scripts/aquamarine.sh
+if [ $? -ne 0 ]; then
+    echo "install aquamarine failed"
+    exit 1
+fi
 ./scripts/hyprgraphics.sh
+if [ $? -ne 0 ]; then
+    echo "install hyprgraphics failed"
+    exit 1
+fi
 ./scripts/hyprcursor.sh
+if [ $? -ne 0 ]; then
+    echo "install hyprcursor failed"
+    exit 1
+fi
 ./scripts/hyprland.sh
+if [ $? -ne 0 ]; then
+    echo "install hyprland failed"
+    exit 1
+fi
 ./scripts/hyprlock.sh
+if [ $? -ne 0 ]; then
+    echo "install hyprlock failed"
+    exit 1
+fi
 ./scripts/hyprland-protocols.sh
+if [ $? -ne 0 ]; then
+    echo "install hyprland-protocols failed"
+    exit 1
+fi
 ./scripts/hypridle.sh
+if [ $? -ne 0 ]; then
+    echo "install hypridle failed"
+    exit 1
+fi
 ./scripts/hyprqtutils.sh
+if [ $? -ne 0 ]; then
+    echo "install hyprqtutils failed"
+    exit 1
+fi
 ./scripts/theme.sh
+if [ $? -ne 0 ]; then
+    echo "install theme failed"
+    exit 1
+fi
 ./scripts/xdph.sh
+if [ $? -ne 0 ]; then
+    echo "install xdph failed"
+    exit 1
+fi
 ./scripts/uwsm.sh
+if [ $? -ne 0 ]; then
+    echo "install uwsm failed"
+    exit 1
+fi
 ./scripts/worksapce.sh
+if [ $? -ne 0 ]; then
+    echo "install worksapce failed"
+    exit 1
+fi
 ./scripts/satty.sh
+if [ $? -ne 0 ]; then
+    echo "install satty failed"
+    exit 1
+fi
 ./scripts/sceensave.sh
+if [ $? -ne 0 ]; then
+    echo "install sceensave failed"
+    exit 1
+fi
 
 
 cp -r ./config/* ~/.config/

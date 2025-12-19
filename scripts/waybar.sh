@@ -34,6 +34,11 @@ git checkout $tag
 meson setup build
 ninja -C build
 sudo ninja -C build install
+if [ $? -ne 0 ]; then
+    cd ..
+    rm -rf Waybar
+    exit 1
+fi
 
 cd ..
 rm -rf Waybar

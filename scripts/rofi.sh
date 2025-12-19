@@ -37,6 +37,12 @@ tar xf rofi-$rofi_tag.tar.gz
 cd rofi-$rofi_tag || exit 1
 meson setup build && ninja -C build
 sudo ninja -C build install
-cd .. || exit 1
+if [ $? -ne 0 ]; then
+    cd ..
+    rm -rf rofi-$rofi_tag.tar.gz
+    rm -rf rofi-$rofi_tag
+    exit 1
+fi
+cd ..
 rm -rf rofi-$rofi_tag.tar.gz
 rm -rf rofi-$rofi_tag
