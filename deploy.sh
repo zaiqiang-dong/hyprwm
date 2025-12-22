@@ -19,6 +19,7 @@ if [[ $host == "NBGB" ]]; then
     echo "config host : $host"
     sed -i 's|exec-once = echo \"Xft\.dpi\:192\" \| xrdb -merge|\# exec-once = echo \"Xft\.dpi\:192\" \| xrdb -merge|g' ./config/hypr/env.conf
     sed -i 's|monitor=,highres,auto,2|monitor=,highres,auto,1|g' ./config/hypr/monitors.conf
+    cp ./workspace/NBGB/workspace.conf ./config/hypr/workspace.conf
 fi
 
 cp -r ./config/* ~/.config/
