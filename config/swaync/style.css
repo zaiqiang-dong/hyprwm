@@ -12,8 +12,6 @@
 
 
 .notification-row {
-  border: none;
-  background-color: @noti-bg;
 }
 
 .notification {
