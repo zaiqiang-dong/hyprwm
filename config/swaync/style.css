@@ -2,17 +2,17 @@
 @define-color noti-bg rgba(28, 28, 28, 1.0);
 @define-color noti-bg-alt rgba(28, 28, 28, 1.0);
 @define-color noti-bg-hover rgba(28, 28, 28, 1.0);
-@define-color text-color rgba(184, 184, 184, 1.0);
+@define-color text-color rgba(192, 192, 192, 1.0);
 
 * {
   font-family: "JetBrains Mono Nerd Font", "Kaiti SC";
-  font-size: 18px;
+  font-size: 16px;
   font-weight: blod;
-  color: @text-color;
+  color: #c4c4c4;
 }
 
-
 .notification-row {
+  background-color: none;
 }
 
 .notification {
@@ -26,7 +26,8 @@
   padding-right: 16px;
 }
 
-.notification-default-action {
+.notification-default-action:hover {
+  background-color: @noti-bg;
 }
 
 .close-button {
@@ -36,14 +37,12 @@
 }
 
 .notification-action {
-  border: none;
-  border-top: 1px solid @noti-border-color;
-  border-right: 1px solid @noti-border-color;
+  border: 1px solid @noti-bg;
 }
 
-.notification-default-action:hover,
 .notification-action:hover {
-  background-color: #262626;
+  background-color: @noti-bg;
+  border: 1px solid @noti-border-color;
 }
 
 .notification-default-action {
@@ -91,14 +90,31 @@
 }
 
 .control-center-list {
+}
+
+.notification-group {
   background-color: @noti-bg;
-  border: 1px solid @noti-bg;
+}
+
+.notification-group-headers {
+  margin-bottom: 16px;
+}
+.notification-group .notification-group-headers .notification-group-icon {
+  color: @noti-border-color;
+}
+.notification-group .notification-group-buttons {
+  margin-bottom: 16px;
+}
+
+.notification-group.collapsed {
+  background-color: @noti-bg;
 }
 
 .control-center-list-placeholder {
 }
 
 .floating-notifications {
+  background: transparent;
 }
 
 .blank-window {
@@ -108,10 +124,12 @@
 }
 
 .widget-title > button {
+  border: 1px solid @noti-bg;
 }
 
 /* clear button */
 .widget-title > button:hover {
+  border: 1px solid @noti-border-color;
 }
 
 .widget-dnd {
@@ -161,10 +179,12 @@
 }
 
 .widget-buttons-grid > flowbox > flowboxchild > button {
+  border: 1px solid @noti-bg;
 }
 
 /* individual buttons */
 .widget-buttons-grid > flowbox > flowboxchild > button:hover {
+  border: 1px solid @noti-border-color;
 }
 
 .widget-menubar > box > .menu-button-bar > button {
