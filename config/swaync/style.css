@@ -2,12 +2,13 @@
 @define-color noti-bg rgba(28, 28, 28, 1.0);
 @define-color noti-bg-alt rgba(28, 28, 28, 1.0);
 @define-color noti-bg-hover rgba(28, 28, 28, 1.0);
-@define-color text-color rgba(148, 148, 148, 1.0);
+@define-color text-color rgba(184, 184, 184, 1.0);
 
 * {
   font-family: "JetBrains Mono Nerd Font", "Kaiti SC";
   font-size: 18px;
-  font-weight: normal;
+  font-weight: blod;
+  color: @text-color;
 }
 
 
