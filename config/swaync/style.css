@@ -10,14 +10,15 @@
   font-weight: normal;
 }
 
-.control-center .notification-row:focus,
-.control-center .notification-row:hover {
-}
 
 .notification-row {
+  border: none;
+  background-color: @noti-bg;
 }
 
 .notification {
+  background-color: @noti-bg;
+  border: 1px solid @noti-border-color;
 }
 
 .notification-content {
@@ -91,6 +92,8 @@
 }
 
 .control-center-list {
+  background-color: @noti-bg;
+  border: 1px solid @noti-bg;
 }
 
 .control-center-list-placeholder {
