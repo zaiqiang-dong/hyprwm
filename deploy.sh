@@ -20,7 +20,7 @@ if [[ $host == "NBGB" ]]; then
     sed -i 's|exec-once = echo \"Xft\.dpi\:192\" \| xrdb -merge|\# exec-once = echo \"Xft\.dpi\:192\" \| xrdb -merge|g' ./config/hypr/env.conf
     sed -i 's|monitor=,highres,auto,2|monitor=,highres,auto,1|g' ./config/hypr/monitors.conf
     sed -i '/\"DP-5\"\: \[1, 2, 3, 4, 5\]/d' ./config/waybar/config.jsonc
-    sed -i 's|\"DP-6\"\: \[6, 7, 8, 9, 10, 11\]|\"eDP-1\"\: \[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11\]|g' ./config/waybar/config.jsonc
+    sed -i '/\"DP-6\"\: \[6, 7, 8, 9, 10, 11\]/d' ./config/waybar/config.jsonc
     cp ./workspace/NBGB/workspace.conf ./config/hypr/workspace.conf
 fi
 
