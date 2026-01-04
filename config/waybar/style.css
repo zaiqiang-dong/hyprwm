@@ -2,7 +2,6 @@
   font-family: "JetBrains Mono Nerd Font", "Kaiti SC";
   font-weight: bold;
   font-size: 19px;
-  color: #c4c4c4;
 }
 
 #waybar {
@@ -19,6 +18,8 @@
   margin-right: 6px;
 }
 
+#clock,
+#network,
 #custom-reboot,
 #bluetooth,
 #battery,
@@ -30,9 +31,11 @@
   margin-top: 0px;
   padding: 0px 2px;
   border-width: 0px;
+  color: #c4c4c4;
 }
 #custom-notify {
   padding: 4px 2px 0px 0px;
+  color: #c4c4c4;
 }
 
 #custpm-temperature.critical,
@@ -52,7 +55,7 @@
 #clock:hover,
 #custom-power:hover,
 #window:hover {
-  background-color: rgba(28, 28, 28, 0);
+  background-color: rgba(28, 28, 28, 1);
 }
 
 #workspaces button.active {
@@ -67,6 +70,7 @@
   padding: 3px 4px 0px 4px;
   margin: 0 2px;
   font-weight: bold;
+  color: #c4c4c4;
 }
 
 #custom-workspace-windows {
@@ -85,3 +89,4 @@ tooltip {
   border: 0px solid #4c566a;
   margin-top: 35px;
 }
+

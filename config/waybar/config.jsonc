@@ -37,7 +37,7 @@
   "custom/notify": {
     "format": "<span color='#3EAF7C'>   </span>",
     "on-click": "swaync-client -t -sw",
-    "tooltip": true,
+    "tooltip": false,
     "tooltip-format": "通知",
   },
   "custom/workspace-windows": {
@@ -49,19 +49,19 @@
   // "custom/lock": {
   // "format": "<span color='#3EAF7C'>  </span>",
   // "on-click": "hyprlock",
-  // "tooltip": true,
+  // "tooltip": false,
   // "tooltip-format": "锁屏"
   // },
   // "custom/reboot": {
   //   "format": "<span color='#3EAF7C'>  </span>",
   //   "on-click": "systemctl reboot",
-  //   "tooltip": true,
+  //   "tooltip": false,
   //   "tooltip-format": "重启"
   // },
   // "custom/power": {
   //   "format": "<span color='#3EAF7C'>  </span>",
   //   "on-click": "systemctl poweroff",
-  //   "tooltip": true,
+  //   "tooltip": false,
   //   "tooltip-format": "关机"
   // },
   "network": {
@@ -82,7 +82,7 @@
     "format-charging": "<span color='#3EAF7C'>󱘖 </span>{capacity}% ",
     "interval": 1,
     "format-icons": ["󰂎", "󰁼", "󰁿", "󰂁", "󰁹"],
-    "tooltip": true,
+    "tooltip": false,
   },
   "pulseaudio": {
     "format": "<span color='#3EAF7C'>{icon}</span>{volume}% ",
@@ -102,30 +102,30 @@
     },
     "on-click-right": "pavucontrol -t 3",
     "on-click": "pactl -- set-sink-mute 0 toggle",
-    "tooltip": true,
+    "tooltip": false,
     "tooltip-format": "当前系统声音: {volume}%",
   },
   "custom/temperature": {
     "exec": "sensors | awk '/^Package id 0:/ {print int($4)}'",
     "format": "<span color='#3EAF7C'> </span>{}°C ",
     "interval": 5,
-    "tooltip": true,
+    "tooltip": false,
     "tooltip-format": "当前 CPU 温度: {}°C",
   },
   "memory": {
     "format": "<span color='#3EAF7C'>󰍛 </span>{used:0.1f}G/{total:0.1f}G ",
-    "tooltip": true,
+    "tooltip": false,
     "tooltip-format": "当前内存占比: {used:0.2f}G/{total:0.2f}G",
   },
   "cpu": {
     "format": "<span color='#3EAF7C'>󰻠 </span>{usage:2}% ",
-    "tooltip": true,
+    "tooltip": false,
   },
   "clock": {
     "interval": 1,
     "timezone": "Asia/Chengdu",
     "format": "<span color='#3EAF7C'>󱫨 </span>{:%V+%w %m-%d %H:%M:%S} ",
-    "tooltip": true,
+    "tooltip": false,
     "tooltip-format": "{:%Y年%m月%d日 %V周 %A %H:%M:%S}",
   },
   "tray": {
@@ -135,7 +135,7 @@
   "backlight": {
     "device": "intel_backlight",
     "format": "<span color='#3EAF7C'>{icon}</span>{percent}% ",
-    "tooltip": true,
+    "tooltip": false,
     "tooltip-format": "当前屏幕亮度: {percent}%",
     "format-icons": [
       "<span color='#3EAF7C'>󰃞 </span>",
