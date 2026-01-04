@@ -72,6 +72,7 @@
     "format-disconnected": "<span color='#3EAF7C'>󰅛 </span>Disconnected ",
     "format-alt": "<span color='#3EAF7C'>󰤨 </span>{signalStrength}% ",
     "interval": 1,
+    "tooltip": false,
   },
   "battery": {
     "states": {
@@ -131,6 +132,7 @@
   "tray": {
     "icon-size": 16,
     "spacing": 6,
+    "tooltip": false,
   },
   "backlight": {
     "device": "intel_backlight",
