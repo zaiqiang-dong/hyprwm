@@ -5,5 +5,5 @@ sudo snap install icon-theme-papirus
 sudo apt install papirus-icon-theme
 sudo mv /usr/share/icons/gnome /usr/share/icons/back-gnome
 sudo mv /usr/share/icons/Papirus-Dark /usr/share/icons/gnome
-gsettings set org.gnome.desktop.interface gtk-theme "Yaru-dark"
-gsettings set org.gnome.desktop.interface icon-theme "Papirus-Dark"
+# gsettings set org.gnome.desktop.interface gtk-theme "Yaru-dark"
+# gsettings set org.gnome.desktop.interface icon-theme "Papirus-Dark"
