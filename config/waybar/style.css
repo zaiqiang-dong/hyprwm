@@ -1,3 +1,5 @@
+@define-color text-color rgba(148, 148, 148, 1.0);
+
 * {
   font-family: "JetBrains Mono Nerd Font", "Kaiti SC";
   font-weight: bold;
@@ -16,6 +18,7 @@
   margin-top: 4px;
   margin-left: 6px;
   margin-right: 6px;
+  color: @text-color;
 }
 
 #clock,
@@ -31,11 +34,11 @@
   margin-top: 0px;
   padding: 0px 2px;
   border-width: 0px;
-  color: #c4c4c4;
+  color: @text-color;
 }
 #custom-notify {
   padding: 4px 2px 0px 0px;
-  color: #c4c4c4;
+  color: @text-color;
 }
 
 #custpm-temperature.critical,
@@ -70,7 +73,7 @@
   padding: 3px 4px 0px 4px;
   margin: 0 2px;
   font-weight: bold;
-  color: #c4c4c4;
+  color: @text-color;
 }
 
 #custom-workspace-windows {
@@ -82,7 +85,7 @@
 
 #window {
   padding: 4px 20px 0px 60px;
-  color: #c4c4c4;
+  color: @text-color;
 }
 
 tooltip {
