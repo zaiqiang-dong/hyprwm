@@ -12,7 +12,13 @@
   box-shadow: none;
 }
 
-#workspaces,
+#workspaces {
+  padding: 2px 4px;
+  margin-top: 4px;
+  margin-left: 6px;
+  margin-right: 6px;
+}
+
 #tray {
   padding: 2px 4px;
   margin-top: 4px;
@@ -67,13 +73,16 @@
   margin: 0 2px;
   border-radius: 0px;
 }
-
 #workspaces button {
   border: none;
   padding: 3px 4px 0px 4px;
   margin: 0 2px;
   font-weight: bold;
   color: @text-color;
+}
+
+#workspaces button:hover{
+  background: rgba(88, 88, 88, 1);
 }
 
 #custom-workspace-windows {
@@ -93,4 +102,3 @@ tooltip {
   border: 0px solid #4c566a;
   margin-top: 35px;
 }
-
