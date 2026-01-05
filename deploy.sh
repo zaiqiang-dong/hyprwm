@@ -25,4 +25,5 @@ if [[ $host == "NBGB" ]]; then
 fi
 
 cp -r ./config/* ~/.config/
+cp ./config/gtk-2.0/gtkrc-2.0 ~/.gtkrc-2.0
 git checkout .
