@@ -119,6 +119,8 @@ sudo apt-get install -y lm-sensors
 sudo apt-get install -y cliphist
 sudo apt-get install -y copyq
 sudo apt-get install -y libqt5printsupport5t64
+sudo apt-get install -y gtk2-engines-murrine
+sudo apt-get install -y gtk2-engines-pixbuf
 # sudo apt-get install -y xdg-desktop-portal-kde
 
 ./scripts/waybar.sh
