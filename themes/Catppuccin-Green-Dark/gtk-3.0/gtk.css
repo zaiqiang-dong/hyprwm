@@ -3998,7 +3998,7 @@ tooltip {
 }
 
 tooltip.background {
-  background-color: rgba(24, 24, 37, 0.9);
+  background-color: rgba(28, 28, 28, 1.0);
   color: #949494;
   border-radius: 12px;
 }
