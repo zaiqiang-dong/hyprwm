@@ -1,13 +1,20 @@
 #!/usr/bin/env bash
 
-# wget -qO- https://git.io/papirus-icon-theme-install | env DESTDIR="$HOME/.icons" sh
+# wget -qO- https://git.io/papirus-icon-theme-install | env DESTDIR ""$HOME/.icons" sh
 sudo snap install icon-theme-papirus
 sudo apt install papirus-icon-theme
-# sudo mv /usr/share/icons/gnome /usr/share/icons/gnome-back
-# sudo mv /usr/share/icons/Yaru /usr/share/icons/Yaru-back
-# sudo mv /usr/share/icons/Yaru-dark /usr/share/icons/Yaru-dark-back
-# sudo cp /usr/share/icons/Papirus /usr/share/icons/gnome -r
-# sudo cp /usr/share/icons/Papirus /usr/share/icons/Yaru -r
-# sudo cp /usr/share/icons/Papirus /usr/share/icons/Yaru-dark -r
-# gsettings set org.gnome.desktop.interface gtk-theme "Yaru-dark"
-# gsettings set org.gnome.desktop.interface icon-theme "Papirus-Dark"
+
+gsettings set org.gnome.desktop.interface gtk-theme "Catppuccin-Green-Dark"
+gsettings set org.gnome.desktop.interface icon-theme "Papirus-Dark"
+gsettings set org.gnome.desktop.interface font-name "JetBrainsMono Nerd Font Ultra-Bold 12"
+gsettings set org.gnome.desktop.interface cursor-theme "Adwaita"
+gsettings set org.gnome.desktop.interface cursor-size "24"
+gsettings set org.gnome.desktop.interface toolbar-style "both-horiz"
+gsettings set org.gnome.desktop.interface toolbar-icons-size "large"
+gsettings set org.gnome.desktop.interface font-hinting "slight"
+gsettings set org.gnome.desktop.interface font-antialiasing "grayscale"
+gsettings set org.gnome.desktop.interface font-rgba-order "rgb"
+gsettings set org.gnome.desktop.interface text-scaling-factor "1.0"
+gsettings set org.gnome.desktop.interface color-scheme "default"
+gsettings set org.gnome.desktop.interface event-sounds "true"
+gsettings set org.gnome.desktop.interface input-feedback-sounds "true"
