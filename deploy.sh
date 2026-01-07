@@ -29,7 +29,7 @@ cp ./config/gtk-2.0/gtkrc-2.0 ~/.gtkrc-2.0
 cp ./themes ~/.local/share/ -r
 
 if [[ -e ~/.config/gtk-4.0 ]]; then
-    rm ~/.config/gtk-4.0
+    rm ~/.config/gtk-4.0 -rf
 fi
 ln -s ~/.local/share/themes/Catppuccin-Green-Dark/gtk-4.0 ~/.config/gtk-4.0
 
