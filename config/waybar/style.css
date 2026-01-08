@@ -2,8 +2,8 @@
 
 * {
   font-family: "JetBrains Mono Nerd Font", "STKaiti";
-  font-weight: bold ;
-  font-size: 19px;
+  font-weight: 600 ;
+  font-size: 20px;
 }
 
 #waybar {
