@@ -1,8 +1,8 @@
 @define-color text-color rgba(148, 148, 148, 1.0);
 
 * {
-  font-family: "JetBrains Mono Nerd Font", "Kaiti SC";
-  font-weight: bold;
+  font-family: "JetBrains Mono Nerd Font", "STKaiti";
+  font-weight: bold ;
   font-size: 19px;
 }
 
