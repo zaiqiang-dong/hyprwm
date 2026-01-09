@@ -37,7 +37,7 @@ git checkout .
 
 gsettings set org.gnome.desktop.interface gtk-theme "Catppuccin-Green-Dark"
 gsettings set org.gnome.desktop.interface icon-theme "Papirus-Dark"
-gsettings set org.gnome.desktop.interface font-name "JetBrainsMono Nerd Font Ultra-Bold 14"
+gsettings set org.gnome.desktop.interface font-name "JetBrainsMono Nerd Font Ultra-Bold 13"
 gsettings set org.gnome.desktop.interface cursor-theme "Adwaita"
 gsettings set org.gnome.desktop.interface cursor-size "24"
 gsettings set org.gnome.desktop.interface toolbar-style "both-horiz"
