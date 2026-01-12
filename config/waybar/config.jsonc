@@ -125,7 +125,7 @@
   "clock": {
     "interval": 1,
     "timezone": "Asia/Chengdu",
-    "format": "<span color='#3EAF7C'> </span>{:%V+%w %m-%d <span color='#3EAF7C'>󱫨 </span>%H:%M:%S} ",
+    "format": "<span color='#3EAF7C'>󰻗 </span>{:%V+%w %m-%d <span color='#3EAF7C'>󱫨 </span>%H:%M:%S} ",
     "tooltip": false,
     "tooltip-format": "{:%Y年%m月%d日 %V周 %A %H:%M:%S}",
   },
