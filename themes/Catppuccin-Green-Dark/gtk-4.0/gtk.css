@@ -1298,7 +1298,7 @@ button.suggested-action.flat:disabled {
 }
 
 button.suggested-action.flat:checked {
-  background-color: rgba(30, 102, 245, 0.3);
+  background-color: #3eaf7c;
 }
 
 button.destructive-action {
@@ -1879,7 +1879,7 @@ dropdown popover.menu .dropdown-searchbar + scrolledwindow:not(.undershoot-top) 
   padding: 6px;
   border-radius: 18px;
   box-shadow: 0 2px 3px -1px rgba(0, 0, 0, 0.15), 0 4px 3px 0 rgba(0, 0, 0, 0.18), 0 1px 6px 0 rgba(0, 0, 0, 0.12), inset 0 1px rgba(239, 241, 245, 0.1);
-  background-color: #292c3c;
+  background-color: #1f2824;
   color: #949494;
 }
 
@@ -2287,8 +2287,8 @@ headerbar .pathbar button {
  **************/
 columnview.view,
 treeview.view {
-  border-left-color: #4a4b5a;
-  border-top-color: #4a4b5a;
+  border-left-color: #1f2824;
+  border-top-color: #1f2824;
 }
 
 columnview.view:hover, columnview.view:selected,
@@ -4789,7 +4789,7 @@ window.dialog.message .titlebar {
 }
 
 window.dialog.message .titlebar:backdrop {
-  background-color: #292c3c;
+  background-color: #1f2824;
   color: rgba(239, 241, 245, 0.7);
 }
 
@@ -4809,7 +4809,7 @@ window.dialog.message .dialog-action-area > button:not(:last-child):hover {
 }
 
 window.dialog.message .dialog-action-area > button.suggested-action:not(:disabled) {
-  background-color: #0a52e0;
+  background-color: #3eaf7c;
   color: #949494;
 }
 
@@ -4829,7 +4829,7 @@ window.aboutdialog.background.csd scrolledwindow.frame > textview.view > text {
  * AdwMessageDialog *
  ********************/
 window.messagedialog {
-  background-color: #292c3c;
+  background-color: #1f2824;
   color: #949494;
   padding: 6px;
 }
@@ -4844,7 +4844,7 @@ window.messagedialog .response-area {
 }
 
 window.messagedialog .response-area button.suggested {
-  background-color: #0a52e0;
+  background-color: #3eaf7c;
   color: #949494;
   /* color: $primary; */
 }
@@ -5107,7 +5107,7 @@ paned > separator {
   -gtk-icon-source: none;
   border-style: none;
   background-color: transparent;
-  background-image: image(#4a4b5a);
+  background-image: image(#1f2824);
   background-size: 1px 1px;
   background-clip: content-box;
   box-shadow: none;
@@ -5117,7 +5117,7 @@ paned > separator.wide {
   min-width: 6px;
   min-height: 6px;
   background-color: #1c1c1c;
-  background-image: image(#4a4b5a), image(#4a4b5a);
+  background-image: image(#1f2824), image(#1f2824);
   background-size: 1px 1px, 1px 1px;
 }
 
@@ -5372,7 +5372,7 @@ colorchooser .popover.osd {
   transition: box-shadow 75ms cubic-bezier(0, 0, 0.2, 1);
   border-radius: 12px;
   box-shadow: 0 2px 3px -1px rgba(0, 0, 0, 0.15), 0 4px 3px 0 rgba(0, 0, 0, 0.18), 0 1px 6px 0 rgba(0, 0, 0, 0.12), inset 0 1px rgba(239, 241, 245, 0.1);
-  background-color: #292c3c;
+  background-color: #1f2824;
 }
 
 colorchooser .popover.osd:backdrop {
@@ -5422,7 +5422,7 @@ window.solid-csd {
   padding: 2px;
   border-radius: 0;
   background-color: #1c1c1c;
-  border: 1px solid #4a4b5a;
+  border: 1px solid #1f2824;
 }
 
 window.solid-csd:backdrop {
@@ -5566,7 +5566,7 @@ shortcut > .keycap {
   border: solid 1px rgba(239, 241, 245, 0.12);
   border-radius: 13px;
   box-shadow: inset 0 -2px rgba(239, 241, 245, 0.12);
-  background-color: #292c3c;
+  background-color: #1f2824;
   color: #949494;
   font-size: smaller;
 }
@@ -5988,7 +5988,7 @@ weekgrid.current {
 }
 
 popover.events {
-  background-color: #292c3c;
+  background-color: #1f2824;
   padding: 0;
 }
 
@@ -6466,17 +6466,17 @@ flowboxchild.card:not(.category-tile) {
 }
 
 .category-tile.card.category-create {
-  background: linear-gradient(180deg, #ce8cd7 0%, #2861c6 100%);
+  background: linear-gradient(180deg, #ce8cd7 0%, #3eaf7c 100%);
   color: white;
 }
 
 .category-tile.card.category-create:hover {
-  background: linear-gradient(180deg, shade(#ce8cd7, 1.07) 0%, shade(#2861c6, 1.1) 100%);
+  background: linear-gradient(180deg, shade(#ce8cd7, 1.07) 0%, shade(#3eaf7c, 1.1) 100%);
   color: white;
 }
 
 .category-tile.card.category-create:active {
-  background: linear-gradient(180deg, shade(#ce8cd7, 0.95) 0%, shade(#2861c6, 0.95) 100%);
+  background: linear-gradient(180deg, shade(#ce8cd7, 0.95) 0%, shade(#3eaf7c, 0.95) 100%);
   color: white;
 }
 
@@ -6541,7 +6541,7 @@ flowboxchild.card:not(.category-tile) {
 .category-tile.card.category-work {
   padding: 1px;
   /* FIXME: work around https://gitlab.gnome.org/GNOME/gtk/-/issues/4324 */
-  color: #1c71d8;
+  color: #3eaf7c;
   background-color: #fdf8d7;
   background-image: linear-gradient(rgba(239, 241, 245, 0.12) 1px, transparent 1px), linear-gradient(90deg, rgba(239, 241, 245, 0.12) 1px, transparent 1px);
   background-size: 10px 10px, 10px 10px;
@@ -6550,13 +6550,13 @@ flowboxchild.card:not(.category-tile) {
 }
 
 .category-tile.card.category-work:hover {
-  color: #1c71d8;
+  color: #3eaf7c;
   background-color: #fefcef;
   background-image: linear-gradient(rgba(239, 241, 245, 0.12) 1px, transparent 1px), linear-gradient(90deg, rgba(239, 241, 245, 0.12) 1px, transparent 1px);
 }
 
 .category-tile.card.category-work:active {
-  color: #1c71d8;
+  color: #3eaf7c;
   background-color: #fcf4bf;
   background-image: linear-gradient(rgba(239, 241, 245, 0.12) 1px, transparent 1px), linear-gradient(90deg, rgba(239, 241, 245, 0.12) 1px, transparent 1px);
   background-size: 10px 10px, 10px 10px;
@@ -7714,7 +7714,7 @@ toast {
   border-spacing: 6px;
   padding: 6px;
   box-shadow: 0 2px 3px -1px rgba(0, 0, 0, 0.1), 0 4px 6px 0 rgba(0, 0, 0, 0.12), 0 1px 10px 0 rgba(0, 0, 0, 0.1), inset 0 1px rgba(239, 241, 245, 0.1);
-  background-color: #292c3c;
+  background-color: #1f2824;
   color: #949494;
   border: none;
 }
@@ -8223,7 +8223,7 @@ panelthemeselector checkbutton.dark:checked {
 
 themeselector checkbutton.follow,
 panelthemeselector checkbutton.follow {
-  background-image: linear-gradient(to bottom right, #949494 50%, #292c3c 50%);
+  background-image: linear-gradient(to bottom right, #949494 50%, #1f2824 50%);
 }
 
 themeselector checkbutton.light,
@@ -8233,7 +8233,7 @@ panelthemeselector checkbutton.light {
 
 themeselector checkbutton.dark,
 panelthemeselector checkbutton.dark {
-  background-color: #292c3c;
+  background-color: #1f2824;
 }
 
 themeselector checkbutton.theme-selector radio,
@@ -8446,7 +8446,7 @@ read if you used those and something break with a version upgrade you're on your
 @define-color blue_1 #99c1f1;
 @define-color blue_2 #62a0ea;
 @define-color blue_3 #3584e4;
-@define-color blue_4 #1c71d8;
+@define-color blue_4 #3eaf7c;
 @define-color blue_5 #1a5fb4;
 @define-color green_1 #8ff0a4;
 @define-color green_2 #57e389;
@@ -8520,7 +8520,7 @@ read if you used those and something break with a version upgrade you're on your
 @define-color card_shade_color rgba(239, 241, 245, 0.12);
 @define-color dialog_bg_color #1f2824;
 @define-color dialog_fg_color #949494;
-@define-color popover_bg_color #292c3c;
+@define-color popover_bg_color #1f2824;
 @define-color popover_fg_color #949494;
 @define-color shade_color rgba(239, 241, 245, 0.12);
 @define-color scrollbar_outline_color rgba(239, 241, 245, 0.12);
