@@ -5781,7 +5781,7 @@ popover.entry-completion > contents {
   margin: 6px;
   border-style: none;
   border-radius: 9px;
-  background-color: rgba(62, 175, 124, 0.15);
+  background-color: #1c1c1c;
   color: #3eaf7c;
 }
 
