@@ -26,7 +26,7 @@ fi
 
 cp -r ./config/* ~/.config/
 cp ./config/gtk-2.0/gtkrc-2.0 ~/.gtkrc-2.0
-cp ./themes ~/.local/share/ -r
+ln -s $(realpath themes) ~/.local/share/themes
 
 if [[ -e ~/.config/gtk-4.0 ]]; then
     rm ~/.config/gtk-4.0 -rf
