@@ -83,6 +83,7 @@
 
 #workspaces button:hover{
   background: rgba(88, 88, 88, 1);
+  border-radius: 0px;
 }
 
 #custom-workspace-windows {
