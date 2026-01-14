@@ -1,0 +1,8 @@
+
+打开css inspector
+
+1. 使能 gsettings set org.gtk.Settings.Debug enable-inspector-keybinding true
+2. 在要调试的窗口按ctrl+shfit+D
+
+
+
