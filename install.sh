@@ -219,8 +219,7 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
-
-cp -r ./config/* ~/.config/
+./deploy.sh
 
 # if lspci -k | grep -A 2 -E "(VGA|3D)" | grep -qi "nvidia"; then
 #     echo "use nvidia gpu"
