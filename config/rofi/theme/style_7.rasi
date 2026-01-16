@@ -16,12 +16,12 @@ configuration {
     window-format: 					"[{w}] ··· {c} ···   {t}";
     click-to-exit: 					true;
     combi-hide-mode-prefix: 				false;
-    display-window: 					"🐅";
-    display-windowcd: 					"🐅";
-    display-run: 					"🐅";
-    display-ssh: 					"🐅";
-    display-drun: 					"🐅";
-    display-combi: 					"🐅";
+    display-window: 					" 🐢 ";
+    display-windowcd: 					" 🐢 ";
+    display-run: 					" 🐢 ";
+    display-ssh: 					" 🐢 ";
+    display-drun: 					" 🐢 ";
+    display-combi: 					" 🐢 ";
 }
 
 @import "colors.rasi"
@@ -31,7 +31,7 @@ configuration {
 }
 
 window {
-    border: 						0px;
+    border: 						1px;
     border-color: 					@ac;
     border-radius: 					0px;
     padding: 						30;
@@ -89,6 +89,10 @@ element-text, element-icon {
     background-color: 					@al;
     text-color:       					inherit;
     size: 						1.65ch;
+}
+
+element-text {
+    margin: 						0px 0px 0px 8px;
 }
 
 element {
