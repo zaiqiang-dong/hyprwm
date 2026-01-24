@@ -109,7 +109,6 @@ sudo apt-get install -y libtomlplusplus-dev
 sudo apt-get install -y libsdbus-c++-dev
 sudo apt-get install -y libzip-dev
 sudo apt-get install -y librsvg2-dev
-sudo apt-get install -y libre2-dev
 sudo apt-get install -y libspa-0.2-dev
 sudo apt-get install -y sway-notification-center
 sudo apt-get install -y slurp
@@ -123,6 +122,12 @@ sudo apt-get install -y libqt5printsupport5t64
 sudo apt-get install -y gtk2-engines-murrine
 sudo apt-get install -y gtk2-engines-pixbuf
 # sudo apt-get install -y xdg-desktop-portal-kde
+
+./scripts/re.sh
+if [ $? -ne 0 ]; then
+    echo "install re failed"
+    exit 1
+fi
 
 ./scripts/waybar.sh
 if [ $? -ne 0 ]; then
