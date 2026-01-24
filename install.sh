@@ -164,6 +164,16 @@ if [ $? -ne 0 ]; then
     echo "install hyprcursor failed"
     exit 1
 fi
+./scripts/hyprland-protocols.sh
+if [ $? -ne 0 ]; then
+    echo "install hyprland-protocols failed"
+    exit 1
+fi
+./scripts/hyprwire.sh
+if [ $? -ne 0 ]; then
+    echo "install hyprlandwire failed"
+    exit 1
+fi
 ./scripts/hyprland.sh
 if [ $? -ne 0 ]; then
     echo "install hyprland failed"
@@ -172,11 +182,6 @@ fi
 ./scripts/hyprlock.sh
 if [ $? -ne 0 ]; then
     echo "install hyprlock failed"
-    exit 1
-fi
-./scripts/hyprland-protocols.sh
-if [ $? -ne 0 ]; then
-    echo "install hyprland-protocols failed"
     exit 1
 fi
 ./scripts/hypridle.sh

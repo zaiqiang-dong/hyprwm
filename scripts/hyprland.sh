@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-tag=v0.52.2
+tag=v0.53.2
 git clone --recursive https://github.com/hyprwm/Hyprland.git
 cd Hyprland
 git checkout $tag
