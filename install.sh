@@ -122,6 +122,10 @@ sudo apt-get install -y libqt5printsupport5t64
 sudo apt-get install -y gtk2-engines-murrine
 sudo apt-get install -y gtk2-engines-pixbuf
 # sudo apt-get install -y xdg-desktop-portal-kde
+sudo apt-get install -y libabsl-dev
+sudo apt-get install -y libmuparser-dev
+sudo apt-get install -y libglaze-dev
+
 
 ./scripts/re.sh
 if [ $? -ne 0 ]; then
