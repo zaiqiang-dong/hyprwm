@@ -4197,23 +4197,30 @@ button:checked row.activatable {
   color: rgba(30, 30, 46, 0.87);
 }
 
+row {
+  background-color: none;
+}
+
+row:hover {
+  background-color: rgba(62, 175, 124, 0.15);
+}
+
 row:selected {
-  background-color: alpha(currentColor, 0.06);
-  color: #949494;
+  background-color: rgba(62, 175, 124, 0.35);
   box-shadow: none;
 }
 
 row:selected:hover {
-  background-color: alpha(currentColor, 0.08);
+  background-color: rgba(62, 175, 124, 0.35);
 }
 
 row:selected:focus, row:selected:focus-visible:focus-within {
+  background-color: rgba(62, 175, 124, 0.35);
   outline: none;
-  background-color: alpha(currentColor, 0.08);
 }
 
 row:selected:focus:hover, row:selected:focus-visible:focus-within:hover {
-  background-color: alpha(currentColor, 0.16);
+  background-color: rgba(62, 175, 124, 0.35);
 }
 
 row:selected button image,
@@ -5766,7 +5773,6 @@ popover.entry-completion > contents {
 
 .nautilus-window .nautilus-grid-view listview.view > row.activatable:nth-child(odd):not(:disabled),
 .nautilus-window .nautilus-list-view listview.view > row.activatable:nth-child(odd):not(:disabled) {
-  background-image: image(alpha(currentColor, 0.03));
 }
 
 .nautilus-window .nautilus-grid-view gridview.view,
