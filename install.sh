@@ -223,11 +223,12 @@ if [ $? -ne 0 ]; then
     echo "install worksapce failed"
     exit 1
 fi
-./scripts/satty.sh
+./scripts/swappy.sh
 if [ $? -ne 0 ]; then
-    echo "install satty failed"
+    echo "install swappy failed"
     exit 1
 fi
+
 ./scripts/sceensave.sh
 if [ $? -ne 0 ]; then
     echo "install sceensave failed"
