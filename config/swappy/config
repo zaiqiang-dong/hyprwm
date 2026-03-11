@@ -1,0 +1,14 @@
+[Default]
+save_dir=$HOME/Pictures
+save_filename_format=swappy-%Y%m%d-%H%M%S.png
+show_panel=false
+line_size=5
+text_size=20
+text_font=Kaiti SC
+paint_mode=rectangle
+early_exit=true
+fill_shape=false
+auto_save=false
+custom_color=rgba(62,175,124,1)
+transparent=false
+transparency=50
