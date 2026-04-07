@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-tag=v0.2.1
+tag=v0.3.0
 
 git clone https://github.com/hyprwm/hyprwire.git
 cd hyprwire

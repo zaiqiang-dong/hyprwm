@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-tag=v0.4.0
+tag=v0.5.1
 git clone https://github.com/hyprwm/hyprgraphics
 cd hyprgraphics/
 git checkout $tag

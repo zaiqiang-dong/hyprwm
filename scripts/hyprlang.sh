@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-tag=v0.6.7
+tag=v0.6.8
 git clone https://github.com/hyprwm/hyprlang.git
 cd hyprlang
 git checkout $tag
