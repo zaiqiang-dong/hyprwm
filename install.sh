@@ -198,9 +198,14 @@ if [ $? -ne 0 ]; then
     echo "install hypridle failed"
     exit 1
 fi
-./scripts/hyprqtutils.sh
+./scripts/hyprtoolkit.sh
 if [ $? -ne 0 ]; then
-    echo "install hyprqtutils failed"
+    echo "install hyprtoolkit failed"
+    exit 1
+fi
+./scripts/hyprland-guiutils.sh
+if [ $? -ne 0 ]; then
+    echo "install hyprland-guiutils failed"
     exit 1
 fi
 ./scripts/theme.sh
