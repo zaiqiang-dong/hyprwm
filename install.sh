@@ -228,9 +228,15 @@ if [ $? -ne 0 ]; then
     echo "install worksapce failed"
     exit 1
 fi
-./scripts/swappy.sh
+# ./scripts/swappy.sh
+# if [ $? -ne 0 ]; then
+#     echo "install swappy failed"
+#     exit 1
+# fi
+
+./scripts/satty.sh
 if [ $? -ne 0 ]; then
-    echo "install swappy failed"
+    echo "install satty failed"
     exit 1
 fi
 

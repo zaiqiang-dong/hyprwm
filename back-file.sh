@@ -10,6 +10,7 @@ fi
 git checkout ./config/hypr/workspace.conf
 cp -r ~/.config/waybar ./config/
 cp -r ~/.config/rofi ./config/
+cp -r ~/.config/satty ./config/
 cp -r ~/.config/swaync ./config/
 cp -r ~/.config/gtk-3.0 ./config/
 cp -r ~/.config/gtk-4.0 ./config/
