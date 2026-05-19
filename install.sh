@@ -113,7 +113,7 @@ sudo apt-get install -y libspa-0.2-dev
 sudo apt-get install -y sway-notification-center
 sudo apt-get install -y slurp
 sudo apt-get install -y wl-clipboard
-sudo apt-get install -y grim
+# sudo apt-get install -y grim
 # sudo apt-get install -y xdg-desktop-portal-phosh
 sudo apt-get install -y lm-sensors
 sudo apt-get install -y cliphist
@@ -237,6 +237,12 @@ fi
 ./scripts/satty.sh
 if [ $? -ne 0 ]; then
     echo "install satty failed"
+    exit 1
+fi
+
+./scripts/grim.sh
+if [ $? -ne 0 ]; then
+    echo "install grim failed"
     exit 1
 fi
 
