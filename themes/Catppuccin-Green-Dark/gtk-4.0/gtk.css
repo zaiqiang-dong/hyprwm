@@ -8327,6 +8327,19 @@ themeswitcher checkbutton.dark {
   background-color: #1c1c1c;
 }
 
+
+/* add for calculate */
+
+widget>stack>widget>multi-layout-view>box>widget>grid>button.bit-toggle-button.flat.text-button {
+  margin:0px;
+  padding: 0px;
+  border-radius:0px;
+}
+
+window>dialog-host>widget>widget>toolbarview>clamp>box.large.vertical {
+   min-width: 1200px;
+}
+
 /* GTK NAMED COLORS
    ----------------
    use responsibly! */
