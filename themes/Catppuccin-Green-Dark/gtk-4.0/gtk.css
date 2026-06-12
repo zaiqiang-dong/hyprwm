@@ -1,24 +1,3 @@
-@keyframes ripple {
-  to {
-    background-size: 1000% 1000%;
-  }
-}
-
-@keyframes ripple-on-slider {
-  to {
-    background-size: auto, 1000% 1000%;
-  }
-}
-
-@keyframes ripple-on-headerbar {
-  from {
-    background-image: radial-gradient(circle, #3eaf7c 0%, transparent 0%);
-  }
-  to {
-    background-image: radial-gradient(circle, #3eaf7c 100%, transparent 100%);
-  }
-}
-
 /***************
  * Base States *
  ***************/
@@ -286,7 +265,7 @@ entry {
   border-spacing: 6px;
   border-radius: 12px;
   caret-color: currentColor;
-  transition: all 75ms cubic-bezier(0, 0, 0.2, 1), box-shadow 300ms cubic-bezier(0, 0, 0.2, 1);
+  transition: background-color 75ms cubic-bezier(0, 0, 0.2, 1), color 75ms cubic-bezier(0, 0, 0.2, 1), border-color 75ms cubic-bezier(0, 0, 0.2, 1), box-shadow 300ms cubic-bezier(0, 0, 0.2, 1);
   box-shadow: inset 0 0 0 2px transparent;
   background-color: rgba(239, 241, 245, 0.08);
   color: #949494;
@@ -405,7 +384,7 @@ entry.password image.caps-lock-indicator {
 entry headerbar popover.background entry.error,
 headerbar popover.background entry entry.error,
 entry.error {
-  transition: all 75ms cubic-bezier(0, 0, 0.2, 1), box-shadow 300ms cubic-bezier(0, 0, 0.2, 1);
+  transition: background-color 75ms cubic-bezier(0, 0, 0.2, 1), color 75ms cubic-bezier(0, 0, 0.2, 1), border-color 75ms cubic-bezier(0, 0, 0.2, 1), box-shadow 300ms cubic-bezier(0, 0, 0.2, 1);
   box-shadow: inset 0 0 0 2px transparent;
   background-color: rgba(239, 241, 245, 0.08);
   color: #949494;
@@ -486,7 +465,7 @@ entry.error > image:disabled {
 entry headerbar popover.background entry.warning,
 headerbar popover.background entry entry.warning,
 entry.warning {
-  transition: all 75ms cubic-bezier(0, 0, 0.2, 1), box-shadow 300ms cubic-bezier(0, 0, 0.2, 1);
+  transition: background-color 75ms cubic-bezier(0, 0, 0.2, 1), color 75ms cubic-bezier(0, 0, 0.2, 1), border-color 75ms cubic-bezier(0, 0, 0.2, 1), box-shadow 300ms cubic-bezier(0, 0, 0.2, 1);
   box-shadow: inset 0 0 0 2px transparent;
   background-color: rgba(239, 241, 245, 0.08);
   color: #949494;
@@ -567,7 +546,7 @@ entry.warning > image:disabled {
 entry headerbar popover.background entry.success,
 headerbar popover.background entry entry.success,
 entry.success {
-  transition: all 75ms cubic-bezier(0, 0, 0.2, 1), box-shadow 300ms cubic-bezier(0, 0, 0.2, 1);
+  transition: background-color 75ms cubic-bezier(0, 0, 0.2, 1), color 75ms cubic-bezier(0, 0, 0.2, 1), border-color 75ms cubic-bezier(0, 0, 0.2, 1), box-shadow 300ms cubic-bezier(0, 0, 0.2, 1);
   box-shadow: inset 0 0 0 2px transparent;
   background-color: rgba(239, 241, 245, 0.08);
   color: #949494;
@@ -708,7 +687,7 @@ treeview entry.flat, treeview entry.flat:focus-within, treeview entry, treeview 
 }
 
 editablelabel > stack > text {
-  transition: all 75ms cubic-bezier(0, 0, 0.2, 1), box-shadow 300ms cubic-bezier(0, 0, 0.2, 1);
+  transition: background-color 75ms cubic-bezier(0, 0, 0.2, 1), color 75ms cubic-bezier(0, 0, 0.2, 1), border-color 75ms cubic-bezier(0, 0, 0.2, 1), box-shadow 300ms cubic-bezier(0, 0, 0.2, 1);
   box-shadow: inset 0 0 0 2px transparent;
   background-color: rgba(239, 241, 245, 0.08);
   color: #949494;
@@ -762,7 +741,7 @@ row.spin spinbutton > button.image-button.down:not(.flat):not(.raised):not(
   color: #949494;
   border: none;
   box-shadow: none;
-  transition: all 75ms cubic-bezier(0, 0, 0.2, 1), background-size 300ms cubic-bezier(0, 0, 0.2, 1), background-image 1200ms cubic-bezier(0, 0, 0.2, 1), outline 300ms cubic-bezier(0, 0, 0.2, 1);
+  transition: background-color 75ms cubic-bezier(0, 0, 0.2, 1), color 75ms cubic-bezier(0, 0, 0.2, 1), border-color 75ms cubic-bezier(0, 0, 0.2, 1), outline-color 300ms cubic-bezier(0, 0, 0.2, 1);
 }
 
 row.spin spinbutton > button.image-button.up:focus:not(.flat):not(.raised):not(
@@ -841,7 +820,7 @@ row.spin spinbutton > button.image-button.down:active:not(.flat):not(.raised):no
 ):not(.destructive-action):not(.opaque):dir(rtl):first-child, headerbar popover.background button:active:not(.suggested-action):not(.destructive-action):not(.flat), .toolbar .linked button:active, button:active {
   color: #949494;
   background-color: alpha(currentColor, 0.12);
-  transition: all 75ms cubic-bezier(0, 0, 0.2, 1), background-size 0ms, background-image 0ms, border 0ms;
+  transition: color 75ms cubic-bezier(0, 0, 0.2, 1);
 }
 
 row.spin spinbutton > button.image-button.up:disabled:not(.flat):not(.raised):not(
@@ -925,7 +904,7 @@ splitbutton.flat > menubutton > button {
   color: rgba(239, 241, 245, 0.7);
   border: none;
   box-shadow: none;
-  transition: all 75ms cubic-bezier(0, 0, 0.2, 1), border-image 225ms cubic-bezier(0, 0, 0.2, 1), background-size 300ms cubic-bezier(0, 0, 0.2, 1), background-image 1200ms cubic-bezier(0, 0, 0.2, 1), outline 300ms cubic-bezier(0, 0, 0.2, 1);
+  transition: background-color 75ms cubic-bezier(0, 0, 0.2, 1), color 75ms cubic-bezier(0, 0, 0.2, 1), border-color 75ms cubic-bezier(0, 0, 0.2, 1), border-image 225ms cubic-bezier(0, 0, 0.2, 1), outline-color 300ms cubic-bezier(0, 0, 0.2, 1);
 }
 
 placessidebar list.navigation-sidebar > row button.sidebar-button:focus:not(:hover):not(:active), calendar > header > button:focus:not(:hover):not(:active), notebook > header > tabs > arrow:focus:not(:hover):not(:active), popover modelbutton:focus:not(:hover):not(:active), .pathbar button:focus:not(:hover):not(:active), spinbutton > button:focus:not(:hover):not(:active), splitbutton.flat > button:focus:not(:hover):not(:active),
@@ -962,7 +941,7 @@ splitbutton.opaque > menubutton > button, menubutton.suggested-action > button, 
   color: rgba(239, 241, 245, 0.7);
   border: none;
   box-shadow: none;
-  transition: all 75ms cubic-bezier(0, 0, 0.2, 1), border-image 225ms cubic-bezier(0, 0, 0.2, 1), background-size 300ms cubic-bezier(0, 0, 0.2, 1), background-image 1200ms cubic-bezier(0, 0, 0.2, 1), outline 300ms cubic-bezier(0, 0, 0.2, 1);
+  transition: background-color 75ms cubic-bezier(0, 0, 0.2, 1), color 75ms cubic-bezier(0, 0, 0.2, 1), border-color 75ms cubic-bezier(0, 0, 0.2, 1), border-image 225ms cubic-bezier(0, 0, 0.2, 1), outline-color 300ms cubic-bezier(0, 0, 0.2, 1);
 }
 
 #NautilusPathButton:focus:not(:hover):not(:active), filechooser #pathbarbox > stack > box > button:focus:not(:hover):not(:active), window.messagedialog .response-area button:focus:not(:hover):not(:active), window.dialog.message .dialog-action-area > button:focus:not(:hover):not(:active), .app-notification button:focus:not(:hover):not(:active), headerbar button:focus:not(:hover):not(:active):not(.suggested-action):not(.destructive-action), .toolbar button:focus:not(:hover):not(:active), splitbutton.suggested-action > button:focus:not(:hover):not(:active),
@@ -1165,7 +1144,7 @@ button.card.keyboard-activating, button.card:active {
   background-image: none;
   color: #949494;
   background-color: alpha(currentColor, 0.12);
-  transition: all 75ms cubic-bezier(0, 0, 0.2, 1), background-size 0ms, background-image 0ms, border 0ms;
+  transition: color 75ms cubic-bezier(0, 0, 0.2, 1);
 }
 
 button.card:checked {
@@ -1314,7 +1293,7 @@ button.destructive-action:disabled {
 }
 
 button.destructive-action:hover {
-  box-shadow: inset 0 0 0 9999px transparent, 0 2px 2.4px -1px rgba(0, 0, 0, 0.1), 0 4px 3px 0 rgba(0, 0, 0, 0.07), 0 1px 6px 0 rgba(0, 0, 0, 0.06);
+  box-shadow: 0 2px 2.4px -1px rgba(0, 0, 0, 0.1), 0 4px 3px 0 rgba(0, 0, 0, 0.07), 0 1px 6px 0 rgba(0, 0, 0, 0.06);
 }
 
 button.destructive-action:checked {
@@ -1322,7 +1301,7 @@ button.destructive-action:checked {
 }
 
 button.destructive-action:checked:hover {
-  box-shadow: inset 0 0 0 9999px transparent, 0 3px 3px -3px rgba(0, 0, 0, 0.15), 0 2px 3px -1px rgba(0, 0, 0, 0.12), 0 2px 5px 0 rgba(0, 0, 0, 0.06);
+  box-shadow: 0 3px 3px -3px rgba(0, 0, 0, 0.15), 0 2px 3px -1px rgba(0, 0, 0, 0.12), 0 2px 5px 0 rgba(0, 0, 0, 0.06);
 }
 
 button.destructive-action:focus {
@@ -1474,7 +1453,7 @@ splitbutton {
 }
 
 splitbutton, splitbutton > separator {
-  transition: all 75ms cubic-bezier(0, 0, 0.2, 1);
+  transition: background-color 75ms cubic-bezier(0, 0, 0.2, 1), color 75ms cubic-bezier(0, 0, 0.2, 1), border-color 75ms cubic-bezier(0, 0, 0.2, 1), box-shadow 75ms cubic-bezier(0, 0, 0.2, 1), outline-color 75ms cubic-bezier(0, 0, 0.2, 1), opacity 75ms cubic-bezier(0, 0, 0.2, 1);
   transition-property: background;
 }
 
@@ -1603,7 +1582,6 @@ buttoncontent > label:dir(rtl) {
 stacksidebar row.needs-attention > label, stackswitcher > button.needs-attention > label,
 stackswitcher > button.needs-attention > image {
   animation: needs-attention 225ms cubic-bezier(0, 0, 0.2, 1) forwards;
-  background-repeat: no-repeat;
   background-position: right 3px;
   background-size: 6px 6px;
 }
@@ -1674,7 +1652,7 @@ list > row button.image-button:not(.flat):active,
 list > row button.image-button:not(.flat):checked {
   color: #949494;
   background-color: alpha(currentColor, 0.12);
-  transition: all 75ms cubic-bezier(0, 0, 0.2, 1), background-size 0ms, background-image 0ms, border 0ms;
+  transition: color 75ms cubic-bezier(0, 0, 0.2, 1);
 }
 
 
@@ -1719,7 +1697,7 @@ spinbutton {
   border-radius: 9px;
   padding: 0;
   border-spacing: 0;
-  transition: all 75ms cubic-bezier(0, 0, 0.2, 1), box-shadow 300ms cubic-bezier(0, 0, 0.2, 1);
+  transition: background-color 75ms cubic-bezier(0, 0, 0.2, 1), color 75ms cubic-bezier(0, 0, 0.2, 1), border-color 75ms cubic-bezier(0, 0, 0.2, 1), box-shadow 300ms cubic-bezier(0, 0, 0.2, 1);
   box-shadow: inset 0 0 0 2px transparent;
   background-color: rgba(239, 241, 245, 0.08);
   color: #949494;
@@ -2468,11 +2446,11 @@ menubar:backdrop {
 }
 
 .csd menubar {
-  transition: all 75ms cubic-bezier(0, 0, 0.2, 1);
+  transition: background-color 75ms cubic-bezier(0, 0, 0.2, 1), color 75ms cubic-bezier(0, 0, 0.2, 1), border-color 75ms cubic-bezier(0, 0, 0.2, 1), box-shadow 75ms cubic-bezier(0, 0, 0.2, 1), outline-color 75ms cubic-bezier(0, 0, 0.2, 1), opacity 75ms cubic-bezier(0, 0, 0.2, 1);
 }
 
 menubar > item {
-  transition: all 75ms cubic-bezier(0, 0, 0.2, 1);
+  transition: background-color 75ms cubic-bezier(0, 0, 0.2, 1), color 75ms cubic-bezier(0, 0, 0.2, 1), border-color 75ms cubic-bezier(0, 0, 0.2, 1), box-shadow 75ms cubic-bezier(0, 0, 0.2, 1), outline-color 75ms cubic-bezier(0, 0, 0.2, 1), opacity 75ms cubic-bezier(0, 0, 0.2, 1);
   min-height: 20px;
   padding: 4px 8px;
   color: rgba(239, 241, 245, 0.7);
@@ -2719,7 +2697,7 @@ notebook > header > tabs > tab {
   color: rgba(239, 241, 245, 0.7);
   border: none;
   box-shadow: none;
-  transition: all 75ms cubic-bezier(0, 0, 0.2, 1), border-image 225ms cubic-bezier(0, 0, 0.2, 1), background-size 300ms cubic-bezier(0, 0, 0.2, 1), background-image 1200ms cubic-bezier(0, 0, 0.2, 1), outline 300ms cubic-bezier(0, 0, 0.2, 1);
+  transition: background-color 75ms cubic-bezier(0, 0, 0.2, 1), color 75ms cubic-bezier(0, 0, 0.2, 1), border-color 75ms cubic-bezier(0, 0, 0.2, 1), border-image 225ms cubic-bezier(0, 0, 0.2, 1), outline-color 300ms cubic-bezier(0, 0, 0.2, 1);
 }
 
 notebook > header > tabs > tab:hover:not(:checked):not(:selected) {
@@ -2744,7 +2722,7 @@ notebook > header > tabs > tab:active {
 }
 
 notebook > header > tabs > tab:checked {
-  transition: all 75ms cubic-bezier(0, 0, 0.2, 1), border-image 225ms cubic-bezier(0, 0, 0.2, 1), background-size 0ms, background-image 0ms, background-color 0ms;
+  transition: color 75ms cubic-bezier(0, 0, 0.2, 1), border-color 75ms cubic-bezier(0, 0, 0.2, 1), border-image 225ms cubic-bezier(0, 0, 0.2, 1), background-color 0ms;
   background-color: rgba(239, 241, 245, 0.04);
   color: #3eaf7c;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
@@ -2928,7 +2906,7 @@ tabbar tab {
   color: rgba(239, 241, 245, 0.7);
   border: none;
   box-shadow: none;
-  transition: all 75ms cubic-bezier(0, 0, 0.2, 1), border-image 225ms cubic-bezier(0, 0, 0.2, 1), background-size 300ms cubic-bezier(0, 0, 0.2, 1), background-image 1200ms cubic-bezier(0, 0, 0.2, 1), outline 300ms cubic-bezier(0, 0, 0.2, 1);
+  transition: background-color 75ms cubic-bezier(0, 0, 0.2, 1), color 75ms cubic-bezier(0, 0, 0.2, 1), border-color 75ms cubic-bezier(0, 0, 0.2, 1), border-image 225ms cubic-bezier(0, 0, 0.2, 1), outline-color 300ms cubic-bezier(0, 0, 0.2, 1);
   color: rgba(239, 241, 245, 0.7);
 }
 
@@ -2954,7 +2932,7 @@ tabbar tab:active {
 }
 
 tabbar tab:selected:not(:active) {
-  transition: all 75ms cubic-bezier(0, 0, 0.2, 1), border-image 225ms cubic-bezier(0, 0, 0.2, 1), background-size 0ms, background-image 0ms, background-color 0ms;
+  transition: color 75ms cubic-bezier(0, 0, 0.2, 1), border-color 75ms cubic-bezier(0, 0, 0.2, 1), border-image 225ms cubic-bezier(0, 0, 0.2, 1), background-color 0ms;
   background-color: rgba(239, 241, 245, 0.04);
   color: #3eaf7c;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
@@ -3266,7 +3244,7 @@ scrollbar > range > trough > slider {
   background-clip: padding-box;
   box-shadow: none;
   outline: none;
-  transition: all 200ms linear;
+  transition: background-color 200ms linear, color 200ms linear, opacity 200ms linear;
   background-color: rgba(239, 241, 245, 0.5);
 }
 
@@ -3349,7 +3327,7 @@ scrollbar.vertical > range > trough > slider {
  * Switch *
  **********/
 switch {
-  transition: all 75ms cubic-bezier(0, 0, 0.2, 1);
+  transition: background-color 75ms cubic-bezier(0, 0, 0.2, 1), color 75ms cubic-bezier(0, 0, 0.2, 1), border-color 75ms cubic-bezier(0, 0, 0.2, 1), box-shadow 75ms cubic-bezier(0, 0, 0.2, 1), outline-color 75ms cubic-bezier(0, 0, 0.2, 1), opacity 75ms cubic-bezier(0, 0, 0.2, 1);
   margin: 6px 0;
   padding: 0;
   border: none;
@@ -3403,7 +3381,7 @@ radio {
   border: none;
   color: transparent;
   background-color: rgba(239, 241, 245, 0.12);
-  transition: all 75ms cubic-bezier(0, 0, 0.2, 1), box-shadow 150ms cubic-bezier(0, 0, 0.2, 1);
+  transition: background-color 75ms cubic-bezier(0, 0, 0.2, 1), color 75ms cubic-bezier(0, 0, 0.2, 1), border-color 75ms cubic-bezier(0, 0, 0.2, 1), box-shadow 150ms cubic-bezier(0, 0, 0.2, 1);
 }
 
 check:hover,
@@ -3662,7 +3640,6 @@ scale > trough:disabled {
 }
 
 scale > trough > highlight {
-  transition: background-image 75ms cubic-bezier(0, 0, 0.2, 1);
   background-image: image(#3eaf7c);
 }
 
@@ -3684,7 +3661,7 @@ scale > trough > slider {
   min-height: 18px;
   min-width: 18px;
   margin: -8px;
-  transition: all 75ms cubic-bezier(0, 0, 0.2, 1);
+  transition: background-color 75ms cubic-bezier(0, 0, 0.2, 1), color 75ms cubic-bezier(0, 0, 0.2, 1), border-color 75ms cubic-bezier(0, 0, 0.2, 1), box-shadow 75ms cubic-bezier(0, 0, 0.2, 1), outline-color 75ms cubic-bezier(0, 0, 0.2, 1), opacity 75ms cubic-bezier(0, 0, 0.2, 1);
   border-radius: 9999px;
   color: #3eaf7c;
   background-color: #1f2824;
@@ -4135,14 +4112,10 @@ row {
 .nautilus-window .nautilus-grid-view child.activatable,
 .nautilus-window .nautilus-list-view child.activatable, columnview.view > header > button,
 treeview.view > header > button, row.activatable {
-  transition: all 75ms cubic-bezier(0, 0, 0.2, 1), background-size 300ms cubic-bezier(0, 0, 0.2, 1), background-image 1200ms cubic-bezier(0, 0, 0.2, 1), font-weight 0;
+  transition: background-color 75ms cubic-bezier(0, 0, 0.2, 1), color 75ms cubic-bezier(0, 0, 0.2, 1), font-weight 0ms;
   outline: none;
   box-shadow: none;
   background-color: transparent;
-  background-image: radial-gradient(circle, transparent 10%, transparent 0%);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 1000% 1000%;
 }
 
 .nautilus-window .nautilus-grid-view child.activatable:focus,
@@ -4167,10 +4140,7 @@ treeview.view > header > button.has-open-popup, row.activatable:hover, row.activ
 .nautilus-window .nautilus-grid-view child.activatable:active,
 .nautilus-window .nautilus-list-view child.activatable:active, columnview.view > header > button:active,
 treeview.view > header > button:active, row.activatable:active {
-  transition: all 75ms cubic-bezier(0, 0, 0.2, 1), background-size 0ms, background-image 0ms, font-weight 0ms;
-  animation: ripple 225ms cubic-bezier(0, 0, 0.2, 1) forwards;
-  background-image: radial-gradient(circle, alpha(currentColor, 0.05) 10%, transparent 0%);
-  background-size: 0% 0%;
+  transition: color 75ms cubic-bezier(0, 0, 0.2, 1), font-weight 0ms;
   background-color: alpha(currentColor, 0.05);
   color: #949494;
   box-shadow: none;
@@ -4198,7 +4168,7 @@ button:checked row.activatable {
 }
 
 row {
-  background-color: none;
+  background-color: transparent;
 }
 
 row:hover {
@@ -4668,7 +4638,7 @@ columnview row:not(:selected) cell editablelabel.editing text selection {
  * Expanders *
  *************/
 expander {
-  transition: all 75ms cubic-bezier(0, 0, 0.2, 1);
+  transition: background-color 75ms cubic-bezier(0, 0, 0.2, 1), color 75ms cubic-bezier(0, 0, 0.2, 1), border-color 75ms cubic-bezier(0, 0, 0.2, 1), box-shadow 75ms cubic-bezier(0, 0, 0.2, 1), outline-color 75ms cubic-bezier(0, 0, 0.2, 1), opacity 75ms cubic-bezier(0, 0, 0.2, 1);
   min-width: 16px;
   min-height: 16px;
   color: rgba(239, 241, 245, 0.7);
@@ -5614,11 +5584,11 @@ stackswitcher.linked:not(.vertical) > button:not(.suggested-action):not(.destruc
 stackswitcher.linked:not(.vertical) > button:not(.suggested-action):not(.destructive-action):active {
   color: #949494;
   background-color: alpha(currentColor, 0.12);
-  transition: all 75ms cubic-bezier(0, 0, 0.2, 1), background-size 0ms, background-image 0ms, border 0ms;
+  transition: color 75ms cubic-bezier(0, 0, 0.2, 1);
 }
 
 stackswitcher.linked:not(.vertical) > button:not(.suggested-action):not(.destructive-action):checked {
-  transition: all 75ms cubic-bezier(0, 0, 0.2, 1), border-image 225ms cubic-bezier(0, 0, 0.2, 1), background-size 0ms, background-image 0ms, background-color 0ms;
+  transition: color 75ms cubic-bezier(0, 0, 0.2, 1), border-color 75ms cubic-bezier(0, 0, 0.2, 1), border-image 225ms cubic-bezier(0, 0, 0.2, 1), background-color 0ms;
   background-color: #3eaf7c;
   color: rgba(30, 30, 46, 0.87);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
@@ -5689,7 +5659,7 @@ button.emoji-section:checked {
 popover.emoji-picker emoji {
   font-size: x-large;
   padding: 6px;
-  transition: all 75ms cubic-bezier(0, 0, 0.2, 1);
+  transition: background-color 75ms cubic-bezier(0, 0, 0.2, 1), color 75ms cubic-bezier(0, 0, 0.2, 1), border-color 75ms cubic-bezier(0, 0, 0.2, 1), box-shadow 75ms cubic-bezier(0, 0, 0.2, 1), outline-color 75ms cubic-bezier(0, 0, 0.2, 1), opacity 75ms cubic-bezier(0, 0, 0.2, 1);
   border-radius: 12px;
 }
 
@@ -6454,7 +6424,7 @@ flowboxchild.card:not(.category-tile) {
 }
 
 .category-tile.card:not(.category-tile-iconless), .category-tile.card:not(.category-tile-iconless):active {
-  transition: all 75ms cubic-bezier(0, 0, 0.2, 1);
+  transition: background-color 75ms cubic-bezier(0, 0, 0.2, 1), color 75ms cubic-bezier(0, 0, 0.2, 1), border-color 75ms cubic-bezier(0, 0, 0.2, 1), box-shadow 75ms cubic-bezier(0, 0, 0.2, 1), outline-color 75ms cubic-bezier(0, 0, 0.2, 1), opacity 75ms cubic-bezier(0, 0, 0.2, 1);
   animation: none;
 }
 
@@ -6625,7 +6595,6 @@ flowboxchild.card:not(.category-tile) {
 
 .install-progress {
   background-image: linear-gradient(to top, #3eaf7c 2px, alpha(#3eaf7c, 0) 2px);
-  background-repeat: no-repeat;
   background-position: 0 bottom;
   background-size: 0;
   transition: none;
@@ -7691,7 +7660,7 @@ avatar.image {
   color: #949494;
   border: none;
   box-shadow: none;
-  transition: all 75ms cubic-bezier(0, 0, 0.2, 1), background-size 300ms cubic-bezier(0, 0, 0.2, 1), background-image 1200ms cubic-bezier(0, 0, 0.2, 1), outline 300ms cubic-bezier(0, 0, 0.2, 1);
+  transition: background-color 75ms cubic-bezier(0, 0, 0.2, 1), color 75ms cubic-bezier(0, 0, 0.2, 1), border-color 75ms cubic-bezier(0, 0, 0.2, 1), outline-color 300ms cubic-bezier(0, 0, 0.2, 1);
   background-color: rgba(239, 241, 245, 0.04);
 }
 
@@ -7704,7 +7673,7 @@ avatar.image {
 .card.activatable:active {
   color: #949494;
   background-color: alpha(currentColor, 0.12);
-  transition: all 75ms cubic-bezier(0, 0, 0.2, 1), background-size 0ms, background-image 0ms, border 0ms;
+  transition: color 75ms cubic-bezier(0, 0, 0.2, 1);
 }
 
 toast {
