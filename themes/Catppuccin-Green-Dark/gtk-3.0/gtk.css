@@ -8574,9 +8574,9 @@ read if you used those and something break with a version upgrade you're on your
 @define-color BLACK_900 #2B2928;
 
 /*
- * Hyprland/XWayland workaround for xdg-desktop-portal-gtk file chooser
- * dialogs opened from Feishu. GTK3 CSD decoration shadows/extents can leave
- * a large transparent frame around the dialog, showing Feishu's background.
+ * Hyprland/XWayland workaround for GTK3 CSD windows opened from Feishu.
+ * Decorations and root content can keep their own radius/shadow, which shows
+ * as rounded inner corners inside Hyprland's square window bounds.
  */
 decoration,
 window.csd decoration,
@@ -8593,13 +8593,21 @@ dialog.background.csd decoration {
 
 window.csd,
 window.background.csd,
+window.background.csd > decoration-overlay,
+window.background.csd > stack.view,
+window.background.csd.unified,
+window.background.csd.unified > decoration,
+window.background.csd.unified > decoration-overlay,
 dialog.csd,
 dialog.background.csd,
+dialog.background.csd > decoration-overlay,
 filechooser,
 filechooser > box,
 filechooser paned {
   margin: 0;
   padding: 0;
+  border-radius: 0;
+  background-clip: border-box;
 }
 
 filechooser #pathbarbox,

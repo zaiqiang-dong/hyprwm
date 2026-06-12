@@ -8340,6 +8340,32 @@ window>dialog-host>widget>widget>toolbarview>clamp>box.large.vertical {
    min-width: 1200px;
 }
 
+/*
+ * Hyprland/XWayland workaround for GNOME Showtime windows opened from Feishu.
+ * Showtime is GTK4/libadwaita; its video page can keep rounded content corners
+ * inside Hyprland's square floating window bounds.
+ */
+window,
+window.csd,
+window.background,
+window.background.csd,
+window > decoration-overlay,
+window > contents,
+window.csd > contents,
+window.background > contents,
+window.background.csd > contents,
+window > contents > toastoverlay,
+window > contents showtime-drag-overlay,
+window > contents #video-page,
+window > contents #video-page > overlay,
+window > contents #video-page graphicsoffload,
+window > contents #video-page graphics-offload,
+window > contents #video-page picture,
+window > contents #video-page .shade {
+  border-radius: 0;
+  background-clip: border-box;
+}
+
 /* GTK NAMED COLORS
    ----------------
    use responsibly! */
