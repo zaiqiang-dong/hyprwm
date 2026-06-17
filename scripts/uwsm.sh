@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-tag=v0.25.3
+tag=v0.26.5
 
 git clone https://github.com/Vladimir-csp/uwsm.git
 cd uwsm

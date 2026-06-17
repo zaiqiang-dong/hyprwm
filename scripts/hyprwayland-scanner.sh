@@ -2,7 +2,7 @@
 
 sudo apt install libpugixml-dev
 
-tag=v0.4.5
+tag=v0.4.6
 git clone https://github.com/hyprwm/hyprwayland-scanner.git
 cd hyprwayland-scanner
 git checkout $tag

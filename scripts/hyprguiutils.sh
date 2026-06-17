@@ -2,8 +2,8 @@
 
 tag=v0.1.5
 
-git clone https://github.com/hyprwm/hyprland-qtutils.git
-cd hyprland-qtutils
+git clone https://github.com/hyprwm/hyprland-guiutils.git
+cd hyprland-guiutils
 git checkout $tag
 
 cmake --no-warn-unused-cli -DCMAKE_BUILD_TYPE:STRING=Release -DCMAKE_INSTALL_PREFIX:PATH=/usr -S . -B ./build
@@ -12,8 +12,8 @@ cmake --build ./build --config Release --target all -j$(nproc 2>/dev/null || get
 sudo cmake --install build
 if [ $? -ne 0 ]; then
     cd ..
-    rm -rf hyprland-qtutils
+    rm -rf hyprland-guiutils
     exit 1
 fi
 cd ..
-rm -rf hyprland-qtutils
+rm -rf hyprland-guiutils
