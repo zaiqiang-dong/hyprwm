@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-tag=v0.12.0
+tag=v0.13.1
 git clone https://github.com/hyprwm/hyprutils.git
 cd hyprutils/
 git checkout $tag

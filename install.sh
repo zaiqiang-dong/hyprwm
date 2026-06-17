@@ -125,6 +125,8 @@ sudo apt-get install -y gtk2-engines-pixbuf
 sudo apt-get install -y libabsl-dev
 sudo apt-get install -y libmuparser-dev
 sudo apt-get install -y libglaze-dev
+sudo apt-get install -y glslang-dev
+
 
 
 ./scripts/re.sh
