@@ -5,14 +5,14 @@ host=$(uname -a | cut -d " " -f 2)
 if [[ $host == "NBJT" ]]; then
     echo "config host : $host"
     sed -i 's|monitor=,highres,auto,2|monitor = DP-1, 3840x2160@60, 0x0, 2\nmonitor = HDMI-A-1, 3840x2160@60, 1920x0, 2|g' ./config/hypr/monitors.conf
-    cp ./workspace/NBJT/workspace.conf ./config/hypr/workspace.conf
+    cp ./workspace/NBJT/workspace.lua ./config/hypr/workspace.lua
     sed -i 's|\"DP-5\"\: \[1, 2, 3, 4, 5\]|\"DP-1\"\: \[1, 2, 3, 4, 5\]|g' ./config/waybar/config.jsonc
     sed -i 's|\"DP-6\"\: \[6, 7, 8, 9, 10, 11\]|\"HDMI-A-1\"\: \[6, 7, 8, 9, 10, 11\]|g' ./config/waybar/config.jsonc
 fi
 
 if [[ $host == "NBGT" ]]; then
     echo "config host : $host"
-    cp ./workspace/NBGT/workspace.conf ./config/hypr/workspace.conf
+    cp ./workspace/NBGT/workspace.lua ./config/hypr/workspace.lua
 fi
 
 if [[ $host == "NBGB" ]]; then
@@ -21,7 +21,7 @@ if [[ $host == "NBGB" ]]; then
     sed -i 's|monitor=,highres,auto,2|monitor=,highres,auto,1|g' ./config/hypr/monitors.conf
     sed -i '/\"DP-5\"\: \[1, 2, 3, 4, 5\]/d' ./config/waybar/config.jsonc
     sed -i '/\"DP-6\"\: \[6, 7, 8, 9, 10, 11\]/d' ./config/waybar/config.jsonc
-    cp ./workspace/NBGB/workspace.conf ./config/hypr/workspace.conf
+    cp ./workspace/NBGB/workspace.lua ./config/hypr/workspace.lua
 fi
 
 cp -r ./config/* ~/.config/
