@@ -218,6 +218,8 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
+sudo ldconfig
+
 ./scripts/hyprland.sh
 if [ $? -ne 0 ]; then
     echo "install hyprland failed"
