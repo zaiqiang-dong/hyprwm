@@ -4,8 +4,10 @@ git clone https://github.com/Alexays/Waybar
 cd Waybar
 
 if [[ -f /usr/local/bin/waybar ]]; then
+    echo "-------- waybar build second times -------"
     meson setup build -Dtests=disabled
 else
+    echo "-------- waybar build first times -------"
     meson setup build
 fi
 ninja -C build
