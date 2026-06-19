@@ -37,6 +37,7 @@ fi
 ln -s ~/.local/share/themes/Catppuccin-Green-Dark/gtk-4.0 ~/.config/gtk-4.0
 
 git checkout .
+git clean -df
 
 gsettings set org.gnome.desktop.interface gtk-theme "Catppuccin-Green-Dark"
 gsettings set org.gnome.desktop.interface icon-theme "Papirus-Dark"
