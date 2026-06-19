@@ -298,6 +298,7 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
+sudo ldconfig
 ./deploy.sh
 
 # if lspci -k | grep -A 2 -E "(VGA|3D)" | grep -qi "nvidia"; then
