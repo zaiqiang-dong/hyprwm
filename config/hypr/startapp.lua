@@ -1,0 +1,10 @@
+-- 启动应用
+hl.on("hyprland.start", function()
+  hl.exec_cmd("wl-paste --type text --watch cliphist -max-items 1000 store")
+  hl.exec_cmd("waybar")
+  hl.exec_cmd("fcitx5 -d")
+  hl.exec_cmd("nm-applet")
+  hl.exec_cmd("blueman-applet")
+  hl.exec_cmd("sleep 1 && bytedance-feishu-stable")
+  hl.exec_cmd("sleep 1 && google-chrome-stable")
+end)
