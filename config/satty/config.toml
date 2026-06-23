@@ -20,7 +20,7 @@ default-hide-toolbars = false
 # The primary highlighter to use, the other is accessible by holding CTRL at the start of a highlight [possible values: block, freehand]
 primary-highlighter = "block"
 # Disable notifications
-disable-notifications = false
+disable-notifications = true
 # Actions to trigger on right click (order is important)
 # [possible values: save-to-clipboard, save-to-file, exit]
 actions-on-right-click = []
