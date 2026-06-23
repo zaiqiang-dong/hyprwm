@@ -268,12 +268,6 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
-./scripts/worksapce.sh
-if [ $? -ne 0 ]; then
-    echo "install worksapce failed"
-    exit 1
-fi
-
 # ./scripts/swappy.sh
 # if [ $? -ne 0 ]; then
 #     echo "install swappy failed"
