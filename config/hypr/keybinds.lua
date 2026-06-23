@@ -29,7 +29,7 @@ hl.bind(mainMod .. " + 0", hl.dsp.focus({ workspace = 10 }))
 
 -- 窗口操作
 hl.bind("CTRL + SHIFT + W", hl.dsp.window.close())
-hl.bind("CTRL + SHIFT + F", hl.dsp.window.fullscreen({ state = 1 }))
+hl.bind("CTRL + SHIFT + F", hl.dsp.window.fullscreen({ mode = "maximized" }))
 
 -- 系统操作
 hl.bind("SUPER + period", hl.dsp.exec_cmd("hypridle"))
