@@ -43,7 +43,8 @@ end
 hl.bind("CTRL + SHIFT + 0", hl.dsp.window.move({ workspace = 10 }))
 
 -- 调整窗口大小 (binde = repeating)
-hl.bind("CTRL + SHIFT + h", hl.dsp.window.resize({ x = 10, y = 0 }), { repeating = true })
-hl.bind("CTRL + SHIFT + l", hl.dsp.window.resize({ x = -10, y = 0 }), { repeating = true })
-hl.bind("CTRL + SHIFT + i", hl.dsp.window.resize({ x = 0, y = -10 }), { repeating = true })
-hl.bind("CTRL + SHIFT + j", hl.dsp.window.resize({ x = 0, y = 10 }), { repeating = true })
+-- 0.55 起 resize 默认是绝对尺寸，必须加 relative = true 才是增量调整
+hl.bind("CTRL + SHIFT + h", hl.dsp.window.resize({ x = 10, y = 0, relative = true }), { repeating = true })
+hl.bind("CTRL + SHIFT + l", hl.dsp.window.resize({ x = -10, y = 0, relative = true }), { repeating = true })
+hl.bind("CTRL + SHIFT + k", hl.dsp.window.resize({ x = 0, y = -10, relative = true }), { repeating = true })
+hl.bind("CTRL + SHIFT + j", hl.dsp.window.resize({ x = 0, y = 10, relative = true }), { repeating = true })
