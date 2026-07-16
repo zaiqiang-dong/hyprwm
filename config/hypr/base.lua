@@ -24,7 +24,9 @@ hl.config({
         hide_on_key_press = true,
     },
     binds = {
-        movefocus_cycles_fullscreen = false,
+        -- 切换焦点时保持 fullscreen/maximized 状态，
+        -- 避免 ctrl+comma 切换窗口时退回分隔平铺
+        movefocus_cycles_fullscreen = true,
     },
     debug = {
         disable_logs = false,

@@ -5,7 +5,24 @@ local term = "neovide -- +terminal -c startinsert"
 
 -- 显示器/窗口切换
 hl.bind(mainMod .. " + period", hl.dsp.focus({ monitor = "+1" }))
-hl.bind(mainMod .. " + comma", hl.dsp.window.cycle_next("hist"))
+
+-- ctrl+comma: 在同一 workspace 内按焦点历史切换窗口
+-- cyclenext 不受 movefocus_cycles_fullscreen 影响，需手动保持 maximized 状态
+-- hl.bind(mainMod .. " + comma", hl.dsp.window.cycle_next("hist"))
+hl.bind(mainMod .. " + comma", function()
+    local cur = hl.get_active_window()
+    -- fullscreen: 0=none, 1=maximized, 2=real fullscreen
+    local was_maximized = cur ~= nil and cur.fullscreen == 1
+    hl.dispatch(hl.dsp.window.cycle_next("hist"))
+    if was_maximized then
+        hl.timer(function()
+            local new = hl.get_active_window()
+            if new ~= nil and new.fullscreen == 0 then
+                hl.dispatch(hl.dsp.window.fullscreen({ mode = "maximized" }))
+            end
+        end, { timeout = 50, type = "oneshot" })
+    end
+end)
 
 -- 启动器
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd("rofi -no-lazy-grab -show drun -modi run,drun,window"))

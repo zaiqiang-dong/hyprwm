@@ -70,6 +70,15 @@ hl.window_rule({
     no_initial_focus = true,
 })
 
+hl.window_rule({
+    name = "windowrule-8-0",
+    match = { title = "^(飞书会议)$" },
+    float = true,
+    center = true,
+    workspace = "12",
+    no_initial_focus = true,
+})
+
 -- Meeting → float, workspace 12
 hl.window_rule({
     name = "windowrule-8-1",
