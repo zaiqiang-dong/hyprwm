@@ -8,7 +8,6 @@ hl.bind(mainMod .. " + period", hl.dsp.focus({ monitor = "+1" }))
 
 -- ctrl+comma: 在同一 workspace 内按焦点历史切换窗口
 -- cyclenext 不受 movefocus_cycles_fullscreen 影响，需手动保持 maximized 状态
--- hl.bind(mainMod .. " + comma", hl.dsp.window.cycle_next("hist"))
 hl.bind(mainMod .. " + comma", function()
     local cur = hl.get_active_window()
     -- fullscreen: 0=none, 1=maximized, 2=real fullscreen

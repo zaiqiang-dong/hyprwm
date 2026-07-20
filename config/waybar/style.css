@@ -82,7 +82,8 @@
 }
 
 #workspaces button:hover{
-  background: rgba(88, 88, 88, 1);
+  background: rgba(64, 175, 124, 1);
+  color: #000000;
   border-radius: 0px;
 }
 
