@@ -92,7 +92,6 @@ sudo apt-get install -y seatd
 sudo apt-get install -y spirv-tools
 sudo apt-get install -y unzip
 sudo apt-get install -y vulkan-validationlayers
-sudo apt-get install -y wayland-protocols
 sudo apt-get install -y xdg-desktop-portal
 sudo apt-get install -y xwayland
 sudo apt-get install -y bc
@@ -149,8 +148,20 @@ sudo apt-get install -y libinotifytools0-dev
 sudo apt-get install -y libpipewire-0.3-dev
 sudo apt-get install -y playerctl
 sudo apt-get install -y libinotify-ocaml-dev
+sudo apt-get install -y libeis-dev
 
 
+./scripts/wayland-scanner.sh
+if [ $? -ne 0 ]; then
+    echo "install re failed"
+    exit 1
+fi
+
+./scripts/wayland-protocols.sh
+if [ $? -ne 0 ]; then
+    echo "install re failed"
+    exit 1
+fi
 
 ./scripts/re.sh
 if [ $? -ne 0 ]; then
