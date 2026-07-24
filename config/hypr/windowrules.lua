@@ -75,8 +75,9 @@ hl.window_rule({
     name = "windowrule-8-1",
     match = { class = "^(Meeting)$" },
     float = true,
-    size = "368 154",
-    move = "50%-184 50%-77",
+    center = true,
+    -- size = "368 154",
+    -- move = "50%-184 50%-77",
     workspace = "12",
     no_initial_focus = true,
 })
