@@ -8,11 +8,13 @@ if [[ $host == "NBJT" ]]; then
 
     sed -i 's|\"DP-5\"\: \[1, 2, 3, 4, 5\]|\"DP-1\"\: \[1, 2, 3, 4, 5\]|g' ./config/waybar/config.jsonc
     sed -i 's|\"DP-6\"\: \[6, 7, 8, 9, 10, 11\]|\"HDMI-A-1\"\: \[6, 7, 8, 9, 10, 11\]|g' ./config/waybar/config.jsonc
+    sed -i '/"backlight",/d' ./config/waybar/config.jsonc
 
     cp ./workspace/NBJT/workspace.lua ./config/hypr/workspace.lua
 
 elif [[ $host == "NBGT" ]]; then
     echo "config host NBGT"
+    sed -i '/"backlight",/d' ./config/waybar/config.jsonc
     cp ./workspace/NBGT/workspace.lua ./config/hypr/workspace.lua
 
 elif [[ $host == "NBGB" ]]; then
