@@ -1,7 +1,0 @@
-{
-  "permissions": {
-    "allow": [
-      "Bash(git ls-remote --tags https://github.com/hyprwm/aquamarine.git | grep -oP 'v[\\\\d.]+' | sort -V | tail -10)"
-    ]
-  }
-}
