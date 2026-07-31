@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-tag=v0.9.5
+tag=v0.9.6
 git clone https://github.com/hyprwm/hyprlock.git
 cd hyprlock
 git checkout $tag

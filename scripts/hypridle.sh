@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-tag=v0.1.7
+tag=v0.1.8
 
 git clone https://github.com/hyprwm/hypridle.git
 cd hypridle
