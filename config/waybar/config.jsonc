@@ -23,6 +23,7 @@
   ],
   "hyprland/workspaces": {
     "disable-scroll": false,
+    "tooltip": false,
     "format": "{icon}",
     "on-click": "activate",
     "persistent-workspaces": {
