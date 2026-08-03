@@ -71,7 +71,7 @@ rubberband, .content-view rubberband, .content-view columnview.view > rubberband
 treeview.view > rubberband,
 .content-view treeview.view > .rubberband, gridview > rubberband, flowbox > rubberband {
   border: 1px solid #3eaf7c;
-  background-color: rgba(166, 227, 161, 0.3);
+  background-color: rgba(64, 175, 124, 0.3);
 }
 
 flowbox > flowboxchild {
@@ -698,10 +698,10 @@ editablelabel > stack > text {
  ***********/
 @keyframes needs-attention {
   from {
-    background-image: radial-gradient(farthest-side, #3eaf7c 0%, rgba(166, 227, 161, 0) 0%);
+    background-image: radial-gradient(farthest-side, #3eaf7c 0%, rgba(64, 175, 124, 0) 0%);
   }
   to {
-    background-image: radial-gradient(farthest-side, #3eaf7c 95%, rgba(166, 227, 161, 0));
+    background-image: radial-gradient(farthest-side, #3eaf7c 95%, rgba(64, 175, 124, 0));
   }
 }
 
@@ -761,7 +761,7 @@ row.spin spinbutton > button.image-button.down:focus:not(.flat):not(.raised):not
 .suggested-action
 ):not(.destructive-action):not(.opaque):dir(rtl):first-child, headerbar popover.background button:focus:not(.suggested-action):not(.destructive-action):not(.flat), .toolbar .linked button:focus, button:focus {
   background-color: alpha(currentColor, 0.08);
-  outline: 2px solid rgba(166, 227, 161, 0.35);
+  outline: 2px solid rgba(64, 175, 124, 1.0);
   outline-offset: 0;
 }
 
@@ -894,7 +894,7 @@ row.spin spinbutton > button.image-button.down:checked:disabled:not(.flat):not(.
 .suggested-action
 ):not(.destructive-action):not(.opaque):dir(rtl):first-child, headerbar popover.background button:checked:disabled:not(.suggested-action):not(.destructive-action):not(.flat), button:checked:disabled {
   outline-color: transparent;
-  background-color: rgba(166, 227, 161, 0.35);
+  background-color: rgba(64, 175, 124, 0.35);
   color: rgba(30, 30, 46, 0.38);
 }
 
@@ -1163,7 +1163,7 @@ button.card:checked:hover {
 
 button.card:checked:disabled {
   outline-color: transparent;
-  background-color: rgba(166, 227, 161, 0.35);
+  background-color: rgba(64, 175, 124, 0.35);
   color: rgba(30, 30, 46, 0.38);
 }
 
@@ -2233,7 +2233,7 @@ headerbar.default-decoration windowcontrols menubutton button {
 }
 
 window.devel headerbar {
-  background: #1c1c1c cross-fade(10% -gtk-icontheme("system-run-symbolic"), image(transparent)) 90% 0/256px 256px no-repeat, linear-gradient(to right, transparent 65%, rgba(166, 227, 161, 0.1)), linear-gradient(to top, #242437 3px, #28283d);
+  background: #1c1c1c cross-fade(10% -gtk-icontheme("system-run-symbolic"), image(transparent)) 90% 0/256px 256px no-repeat, linear-gradient(to right, transparent 65%, rgba(64, 175, 124, 0.1)), linear-gradient(to top, #242437 3px, #28283d);
 }
 
 window.devel headerbar:backdrop {
@@ -3411,14 +3411,14 @@ radio:indeterminate {
 check:checked:hover, check:indeterminate:hover,
 radio:checked:hover,
 radio:indeterminate:hover {
-  box-shadow: 0 0 0 6px rgba(166, 227, 161, 0.15);
+  box-shadow: 0 0 0 6px rgba(64, 175, 124, 0.15);
   background-color: #3eaf7c;
 }
 
 check:checked:active, check:indeterminate:active,
 radio:checked:active,
 radio:indeterminate:active {
-  box-shadow: 0 0 0 6px rgba(166, 227, 161, 0.2);
+  box-shadow: 0 0 0 6px rgba(64, 175, 124, 0.2);
   background-color: #3eaf7c;
 }
 
@@ -3426,7 +3426,7 @@ check:checked:disabled, check:indeterminate:disabled,
 radio:checked:disabled,
 radio:indeterminate:disabled {
   color: rgba(30, 30, 46, 0.6);
-  background-color: rgba(166, 227, 161, 0.35);
+  background-color: rgba(64, 175, 124, 0.35);
 }
 
 popover modelbutton.flat check, popover modelbutton.flat check:focus, popover modelbutton.flat check:hover, popover modelbutton.flat check:focus:hover, popover modelbutton.flat check:active, popover modelbutton.flat check:disabled, popover modelbutton.flat radio, popover modelbutton.flat radio:focus, popover modelbutton.flat radio:hover, popover modelbutton.flat radio:focus:hover, popover modelbutton.flat radio:active, popover modelbutton.flat radio:disabled {
@@ -5495,7 +5495,7 @@ treeview.view:selected, calendar:selected, calendar > grid > label.day-number:se
 
 flowbox > flowboxchild:selected, calendar > grid > label.today {
   color: #3eaf7c;
-  background-color: rgba(166, 227, 161, 0.2);
+  background-color: rgba(64, 175, 124, 0.2);
 }
 
 textview text selection:focus, textview text selection, label > selection,
@@ -5774,12 +5774,12 @@ popover.entry-completion > contents {
 }
 
 .nautilus-window banner > revealer > widget button {
-  background-color: rgba(166, 227, 161, 0.3);
+  background-color: rgba(64, 175, 124, 0.3);
   color: rgba(30, 30, 46, 0.87);
 }
 
 .nautilus-window banner > revealer > widget button:hover {
-  background-color: rgba(166, 227, 161, 0.6);
+  background-color: rgba(64, 175, 124, 0.6);
 }
 
 #NautilusQueryEditor > menubutton > button.image-button {
