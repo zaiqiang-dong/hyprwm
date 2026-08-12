@@ -1,6 +1,6 @@
+@theme "~/.config/rofi/theme/style_7.rasi"
+
 configuration {
     case-sensitive: false;
     case-smart: false;
 }
-
-@theme "~/.config/rofi/theme/style_7.rasi"

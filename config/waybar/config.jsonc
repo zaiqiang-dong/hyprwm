@@ -12,7 +12,6 @@
   "modules-right": [
     "battery",
     "pulseaudio",
-    "backlight",
     "custom/temperature",
     "memory",
     "cpu",

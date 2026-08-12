@@ -24,11 +24,11 @@ hl.bind(mainMod .. " + comma", function()
 end)
 
 -- 启动器
-hl.bind(mainMod .. " + R", hl.dsp.exec_cmd("rofi -no-lazy-grab -show drun -modi run,drun,window"))
+hl.bind(mainMod .. " + R", hl.dsp.exec_cmd("rofi -i -no-lazy-grab -show drun -modi run,drun,window"))
 hl.bind(mainMod .. " + Tab", hl.dsp.exec_cmd("swaync-client -t -sw"))
 
 -- 剪贴板历史
-hl.bind("CTRL + SHIFT + v", hl.dsp.exec_cmd("cliphist list | rofi -dmenu -window-title \"🐕‍🦺\"| cliphist decode | wl-copy"))
+hl.bind("CTRL + SHIFT + v", hl.dsp.exec_cmd("cliphist list | rofi -dmenu -i -window-title \"🐕‍🦺\"| cliphist decode | wl-copy"))
 
 -- 终端
 hl.bind(mainMod .. " + Return", hl.dsp.exec_cmd(term))
