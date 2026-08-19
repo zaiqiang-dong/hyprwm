@@ -2,7 +2,12 @@
 hl.config({
     general = {
         border_size = 0,
+        gaps_in = 0,
         gaps_out = 0,
+        col = {
+            active_border = "rgba(3eaf7cff)",
+            inactive_border = "rgba(3eaf7cff)",
+        },
         resize_on_border = true,
         layout = "master",
     },
@@ -13,6 +18,9 @@ hl.config({
         focus_on_activate = true,
     },
     decoration = {
+        shadow = {
+            enabled = false,
+        },
         blur = {
             enabled = false,
         },
