@@ -56,12 +56,9 @@ hl.bind("CTRL + SHIFT + W", hl.dsp.window.close())
 hl.bind("CTRL + SHIFT + F", hl.dsp.window.fullscreen({ mode = "maximized" }))
 
 -- 系统操作
-hl.bind("SUPER + period", function()
-	hl.dispatch(hl.dsp.exec_cmd("hyprlock"))
-	hl.timer(function()
-		hl.dispatch(hl.dsp.dpms({ action = "off" }))
-	end, { timeout = 5000, type = "oneshot" })
-end)
+-- 锁屏 5 秒后关屏；锁屏期间被唤醒但 10 秒内未解锁则再次关屏，直到解锁退出监视
+-- 注意：0.55+ 中 hyprctl dispatch 参数按 Lua 解析，dpms 必须用 hyprctl eval 走 hl.dsp
+hl.bind("SUPER + period", hl.dsp.exec_cmd([[hyprlock & sleep 5 && pgrep -x hyprlock >/dev/null && hyprctl eval 'hl.dispatch(hl.dsp.dpms({action = "off"}))'; (while pgrep -x hyprlock >/dev/null; do if hyprctl monitors -j | grep -q '"dpmsStatus": *true'; then sleep 10; pgrep -x hyprlock >/dev/null && hyprctl eval 'hl.dispatch(hl.dsp.dpms({action = "off"}))'; else sleep 1; fi; done) &]]))
 hl.bind("SUPER + e", hl.dsp.exec_cmd("hyprctl dispatch exit"))
 hl.bind("SUPER + minus", hl.dsp.exec_cmd("systemctl poweroff"))
 
