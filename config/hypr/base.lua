@@ -1,42 +1,44 @@
 -- 基础设置
 hl.config({
-    general = {
-        border_size = 0,
-        gaps_in = 0,
-        gaps_out = 0,
-        col = {
-            active_border = "rgba(3eaf7cff)",
-            inactive_border = "rgba(3eaf7cff)",
-        },
-        resize_on_border = true,
-        layout = "master",
-    },
-    misc = {
-        disable_hyprland_logo = true,
-        background_color = "rgb(1c1c1c)",
-        exit_window_retains_fullscreen = true,
-        focus_on_activate = true,
-    },
-    decoration = {
-        shadow = {
-            enabled = false,
-        },
-        blur = {
-            enabled = false,
-        },
-    },
-    input = {
-        follow_mouse = 2,
-    },
-    cursor = {
-        hide_on_key_press = true,
-    },
-    binds = {
-        -- 切换焦点时保持 fullscreen/maximized 状态，
-        -- 避免 ctrl+comma 切换窗口时退回分隔平铺
-        movefocus_cycles_fullscreen = true,
-    },
-    debug = {
-        disable_logs = false,
-    },
+	general = {
+		border_size = 0,
+		gaps_in = 0,
+		gaps_out = 0,
+		col = {
+			active_border = "rgba(3eaf7cff)",
+			inactive_border = "rgba(3eaf7cff)",
+		},
+		resize_on_border = true,
+		layout = "master",
+	},
+	misc = {
+		disable_hyprland_logo = true,
+		background_color = "rgb(1c1c1c)",
+		exit_window_retains_fullscreen = true,
+		focus_on_activate = true,
+		key_press_enables_dpms = true,
+		mouse_move_enables_dpms = true,
+	},
+	decoration = {
+		shadow = {
+			enabled = false,
+		},
+		blur = {
+			enabled = false,
+		},
+	},
+	input = {
+		follow_mouse = 2,
+	},
+	cursor = {
+		hide_on_key_press = true,
+	},
+	binds = {
+		-- 切换焦点时保持 fullscreen/maximized 状态，
+		-- 避免 ctrl+comma 切换窗口时退回分隔平铺
+		movefocus_cycles_fullscreen = true,
+	},
+	debug = {
+		disable_logs = false,
+	},
 })

@@ -9,18 +9,18 @@ hl.bind(mainMod .. " + period", hl.dsp.focus({ monitor = "+1" }))
 -- ctrl+comma: 在同一 workspace 内按焦点历史切换窗口
 -- cyclenext 不受 movefocus_cycles_fullscreen 影响，需手动保持 maximized 状态
 hl.bind(mainMod .. " + comma", function()
-    local cur = hl.get_active_window()
-    -- fullscreen: 0=none, 1=maximized, 2=real fullscreen
-    local was_maximized = cur ~= nil and cur.fullscreen == 1
-    hl.dispatch(hl.dsp.window.cycle_next("hist"))
-    if was_maximized then
-        hl.timer(function()
-            local new = hl.get_active_window()
-            if new ~= nil and new.fullscreen == 0 then
-                hl.dispatch(hl.dsp.window.fullscreen({ mode = "maximized" }))
-            end
-        end, { timeout = 50, type = "oneshot" })
-    end
+	local cur = hl.get_active_window()
+	-- fullscreen: 0=none, 1=maximized, 2=real fullscreen
+	local was_maximized = cur ~= nil and cur.fullscreen == 1
+	hl.dispatch(hl.dsp.window.cycle_next("hist"))
+	if was_maximized then
+		hl.timer(function()
+			local new = hl.get_active_window()
+			if new ~= nil and new.fullscreen == 0 then
+				hl.dispatch(hl.dsp.window.fullscreen({ mode = "maximized" }))
+			end
+		end, { timeout = 50, type = "oneshot" })
+	end
 end)
 
 -- 启动器
@@ -28,18 +28,26 @@ hl.bind(mainMod .. " + R", hl.dsp.exec_cmd("rofi -i -no-lazy-grab -show drun -mo
 hl.bind(mainMod .. " + Tab", hl.dsp.exec_cmd("swaync-client -t -sw"))
 
 -- 剪贴板历史
-hl.bind("CTRL + SHIFT + v", hl.dsp.exec_cmd("cliphist list | rofi -dmenu -i -window-title \"🐕‍🦺\"| cliphist decode | wl-copy"))
+hl.bind(
+	"CTRL + SHIFT + v",
+	hl.dsp.exec_cmd('cliphist list | rofi -dmenu -i -window-title "🐕‍🦺"| cliphist decode | wl-copy')
+)
 
 -- 终端
 hl.bind(mainMod .. " + Return", hl.dsp.exec_cmd(term))
 
 -- 截图
 hl.bind("CTRL + SHIFT + a", hl.dsp.exec_cmd("bash -c \"grim -g '$(slurp -d)' -t ppm - | satty --filename -\""))
-hl.bind("CTRL + SHIFT + b", hl.dsp.exec_cmd("bash -c \"slurp > /tmp/slurp-out 2>&1 &&  sleep 5 && cat /tmp/slurp-out | xargs -I {} grim -g {} - | satty --filename -\""))
+hl.bind(
+	"CTRL + SHIFT + b",
+	hl.dsp.exec_cmd(
+		'bash -c "slurp > /tmp/slurp-out 2>&1 &&  sleep 5 && cat /tmp/slurp-out | xargs -I {} grim -g {} - | satty --filename -"'
+	)
+)
 
 -- 工作区切换
 for i = 1, 9 do
-    hl.bind(mainMod .. " + " .. i, hl.dsp.focus({ workspace = i }))
+	hl.bind(mainMod .. " + " .. i, hl.dsp.focus({ workspace = i }))
 end
 hl.bind(mainMod .. " + 0", hl.dsp.focus({ workspace = 10 }))
 
@@ -48,13 +56,18 @@ hl.bind("CTRL + SHIFT + W", hl.dsp.window.close())
 hl.bind("CTRL + SHIFT + F", hl.dsp.window.fullscreen({ mode = "maximized" }))
 
 -- 系统操作
-hl.bind("SUPER + period", hl.dsp.exec_cmd("hypridle"))
+hl.bind("SUPER + period", function()
+	hl.dispatch(hl.dsp.exec_cmd("hyprlock"))
+	hl.timer(function()
+		hl.dispatch(hl.dsp.dpms({ action = "off" }))
+	end, { timeout = 5000, type = "oneshot" })
+end)
 hl.bind("SUPER + e", hl.dsp.exec_cmd("hyprctl dispatch exit"))
 hl.bind("SUPER + minus", hl.dsp.exec_cmd("systemctl poweroff"))
 
 -- 移动窗口到工作区
 for i = 1, 9 do
-    hl.bind("CTRL + SHIFT + " .. i, hl.dsp.window.move({ workspace = i }))
+	hl.bind("CTRL + SHIFT + " .. i, hl.dsp.window.move({ workspace = i }))
 end
 hl.bind("CTRL + SHIFT + 0", hl.dsp.window.move({ workspace = 10 }))
 
