@@ -1,0 +1,30 @@
+scripts/check-update.sh
+  s_255b881ed65cb4::t_cd545d78aecd25 1-131
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.2",
+  "base_commit_sha": "d311a6abe86d6b77e588a5f73a934ab6ccba4839",
+  "prompts": {},
+  "sessions": {
+    "s_255b881ed65cb4": {
+      "agent_id": {
+        "tool": "trae",
+        "id": "01a0a2ba-6094-7952-8855-b40cb67d549a",
+        "model": "GLM-5.3"
+      },
+      "human_author": "Zaiqiang Dong <dongzq@autoai.com>",
+      "custom_attributes": {
+        "client_type": "cli",
+        "edit_kind": "file_edit",
+        "source_scene": "agent",
+        "runtime_client": "traex-cli",
+        "tool_name": "Write",
+        "session_id": "01a0a2ba-6094-7952-8855-b40cb67d549a",
+        "external_session_id": "01a0a2ba-6094-7952-8855-b40cb67d549a",
+        "tool_use_id": "call_86bec2ec5db44b0da5109268",
+        "operation_id": "call_86bec2ec5db44b0da5109268"
+      }
+    }
+  }
+}
