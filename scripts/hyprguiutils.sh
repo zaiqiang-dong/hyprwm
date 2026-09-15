@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-tag=v0.1.5
+tag=v0.2.2
 
 git clone https://github.com/hyprwm/hyprland-guiutils.git
 cd hyprland-guiutils

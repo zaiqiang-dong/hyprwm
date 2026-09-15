@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 git clone https://github.com/hyprwm/hyprtoolkit.git
-tag=v0.5.4
+tag=v0.6.0
 cd hyprtoolkit
 git checkout $tag
 cmake --no-warn-unused-cli -DCMAKE_BUILD_TYPE:STRING=Release -DCMAKE_INSTALL_PREFIX:PATH=/usr -S . -B ./build
