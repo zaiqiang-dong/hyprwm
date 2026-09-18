@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
+tag=v0.15.0
 git clone https://github.com/Alexays/Waybar
 cd Waybar
+git checkout $tag
 
 if [[ -f /usr/local/bin/waybar ]]; then
     echo "-------- waybar build second times -------"
