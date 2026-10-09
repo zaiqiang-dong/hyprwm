@@ -12,7 +12,7 @@ copy-command = "wl-copy"
 # Increase or decrease the size of the annotations
 annotation-size-factor = 1.2
 # Filename to use for saving action. Omit to disable saving to file. Might contain format specifiers: https://docs.rs/chrono/latest/chrono/format/strftime/index.html
-output-filename = "/tmp/test-%Y-%m-%d_%H:%M:%S.png"
+output-filename = "~/Pictures/%Y-%m-%d_%H:%M:%S.png"
 # After copying the screenshot, save it to a file as well
 save-after-copy = false
 # Hide toolbars by default
@@ -43,7 +43,7 @@ brush-smooth-history-size = 0
 
 # Font to use for text annotations
 [font]
-family = "Kaiti SC"
+family = "STCuKai-SC"
 style = "Bold"
 
 # Custom colours for the colour palette
