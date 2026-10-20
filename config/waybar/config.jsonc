@@ -49,7 +49,7 @@
   },
 
   "custom/todo": {
-    "format": "<span color='#00af5f'>󱃕 </span> ",
+    "format": "<span color='#00af5f'>󱃕 </span>{}",
     "exec": "~/.config/waybar/scripts/todo/todo.sh",
     "on-double-click": "~/.config/waybar/scripts/todo/todo.sh --mark-done",
 
