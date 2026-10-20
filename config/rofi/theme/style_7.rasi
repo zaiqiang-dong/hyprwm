@@ -8,7 +8,7 @@
  */
 
 configuration {
-    font:                        			"JetBrainsMono Nerd Font,STCuKai-SC Bold 12";
+    font:                        			"JetBrainsMono Nerd Font,STZhongKai-SC Bold 13";
     fixed-num-lines: 					true;
     show-icons: 					true;
     sidebar-mode: 					false;

@@ -92,7 +92,7 @@ entry {
     border:                      1px;
     border-radius:               8px;
     border-color:                rgba(215, 32, 95, 1);
-    padding:                     10px;
+    padding:                     11px 10px;
 }
 
 /*****----- Listview (The Buttons) -----*****/

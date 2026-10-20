@@ -19,6 +19,9 @@ window.messagedialog entry {
   caret-color: #949494;
   background-color: #1c1c1c;
   box-shadow: inset 0 0 0 1px #d7205f;
+  /* 基础主题 min-height 34px, 增加 10% */
+  min-height: 37px;
+  padding: 10px 8px;
 }
 
 window.messagedialog entry:focus-within {
