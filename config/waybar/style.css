@@ -68,7 +68,7 @@
 }
 
 #workspaces button.active {
-  border-top-color: rgba(64, 175, 124, 1);
+  border-top-color: rgba(0, 175, 95, 1);
 }
 #workspaces button {
   border: none;
@@ -81,18 +81,18 @@
 }
 
 #workspaces button:hover{
-  background: rgba(64, 175, 124, 1);
+  background: rgba(0, 175, 95, 1);
   color: #000000;
   border-radius: 0px;
 }
 
 #workspaces button:active {
-  background: rgba(64, 175, 124, 1);
+  background: rgba(0, 175, 95, 1);
   color: #000000;
 }
 
 #custom-workspace-windows {
-  color: #3eaf7c;
+  color: #00af5f;
   font-weight: bold;
   border: none;
   padding: 6px 4px 0px 4px;
