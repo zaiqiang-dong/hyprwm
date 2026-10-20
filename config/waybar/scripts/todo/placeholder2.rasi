@@ -1,16 +1,18 @@
 /*****----- Configuration -----*****/
 
 * {
+    font:                       "JetBrainsMono Nerd Font,STCuKai-SC 12 Bold";
     background: rgba(28, 28, 28, 1);
-    background-alt: rgba(38, 38, 38, 1);
+    background-alt: rgba(28, 28, 28, 1);
     foreground: rgba(148, 148, 148, 1);
-    selected: rgba(62, 175, 124, 1);
-    hover: rgba(62, 175, 124, 0.2);
-    active: rgba(62, 175, 124, 1);
+    selected: rgba(0, 175, 95, 1);
+    hover: rgba(0, 175, 95, 0.2);
+    active: rgba(0, 175, 95, 1);
     urgent: rgba(215, 32, 95, 1);
 }
 
 configuration {
+    font:                       "JetBrainsMono Nerd Font,STCuKai-SC 12 Bold";
     show-icons:                 false;
     hover-select: true;
     me-select-entry: "";
@@ -47,7 +49,7 @@ input-wrapper {
     background-color:            @background;
     border-radius:               12px;
     border:                      1px;
-    border-color:                @hover; 
+    border-color:                @active; 
     children:                    [ "message", "inputbar" ];
 }
 
@@ -59,6 +61,7 @@ message {
     border:                      0px;
 }
 textbox {
+    font:                        "JetBrainsMono Nerd Font,STCuKai-SC 12 Bold";
     background-color:            transparent;
     text-color:                  @foreground;
     vertical-align:              0.5;
@@ -77,6 +80,7 @@ inputbar {
 }
 
 entry {
+    font:                        "JetBrainsMono Nerd Font,STCuKai-SC 12 Bold";
     background-color:            @background-alt; 
     text-color:                  @foreground;
     cursor:                      text;
@@ -86,7 +90,7 @@ entry {
     horizontal-align:            0.5;
     border:                      1px;
     border-radius:               8px;
-    border-color:                @hover;
+    border-color:                rgba(215, 32, 95, 1);
     padding:                     10px;
 }
 
@@ -106,7 +110,7 @@ listview {
 }
 
 element {
-    padding:                     12px 10px;
+    padding:                     10px 10px;
     border-radius:               12px;
     background-color:            @background;
     text-color:                  @foreground;
@@ -116,6 +120,7 @@ element {
 }
 
 element-text {
+    font:                        "JetBrainsMono Nerd Font,STCuKai-SC 12 Bold";
     background-color:            transparent;
     text-color:                  inherit;
     horizontal-align:            0.5;
@@ -126,4 +131,13 @@ element selected {
     background-color:            @selected;
     text-color:                  @background;
     border-color:                @active;
+}
+
+element hover {
+    background-color:            @active;
+    text-color:                  @background;
+}
+
+element hover element-text {
+    text-color:                  @background;
 }

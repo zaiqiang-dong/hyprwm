@@ -13,12 +13,12 @@ tui_script="$todo_dir/todo_tui.sh"
 rofi_script="$todo_dir/todo_rofi.sh"
 
 # Colors matching nvim "mycolor" colorscheme
-primary_color="#3eaf7c"   # green -> completed
+primary_color="#00af5f"   # DiffAdd / manSectionHeading green -> completed
 secondary_color="#d7205f" # Title / Statement magenta -> pending
 
-# 256-color versions for the TUI (approximation of #3eaf7c = xterm 072)
+# 256-color versions for the TUI (cterm values from mycolor.vim)
 term_primary=$'\e[38;5;161m'   # pending tasks: Title ctermfg=161
-term_secondary=$'\e[38;5;072m' # done tasks: #3eaf7c -> cterm 072 (#5faf87)
+term_secondary=$'\e[38;5;002m' # done tasks: DiffAdd ctermfg=002
 reset=$'\e[0m'
 
 # define colors for rofi ui and tooltip

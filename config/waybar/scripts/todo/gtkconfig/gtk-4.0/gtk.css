@@ -1,0 +1,46 @@
+/* zenity 对话框样式:与 rofi 界面统一
+   背景 #1c1c1c, 1px #00af5f 边框, 文字 #949494, 输入框 #d7205f 边框,
+   英文 JetBrainsMono Bold + 中文 STCuKai-SC */
+window.messagedialog {
+  background-color: #1c1c1c;
+  color: #949494;
+  border: 1px solid #00af5f;
+  font-family: "JetBrainsMono Nerd Font", "STCuKai-SC";
+  font-weight: bold;
+}
+
+window.messagedialog text,
+window.messagedialog label {
+  color: #949494;
+}
+
+window.messagedialog entry {
+  color: #949494;
+  caret-color: #949494;
+  background-color: #1c1c1c;
+  box-shadow: inset 0 0 0 1px #d7205f;
+}
+
+window.messagedialog entry:focus-within {
+  box-shadow: inset 0 0 0 1px #d7205f;
+}
+
+window.messagedialog .response-area button {
+  background-color: #1c1c1c;
+  color: #949494;
+  border: 1px solid #00af5f;
+  min-height: 22px;
+  padding: 5px 12px;
+}
+
+window.messagedialog .response-area button:hover {
+  background-color: #00af5f;
+  color: #1c1c1c;
+  border-color: #00af5f;
+}
+
+/* GTK4 按钮文字是 label 子节点,需显式覆盖其继承色 */
+window.messagedialog .response-area button:hover label,
+window.messagedialog .response-area button:hover text {
+  color: #1c1c1c;
+}

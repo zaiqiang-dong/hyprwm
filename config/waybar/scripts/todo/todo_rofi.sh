@@ -12,14 +12,17 @@ rofi_choice() {
     local msg="$1"
     local opt1="$2"
     local opt2="$3"
-    echo -e "$opt1\n$opt2" | rofi -dmenu -theme "$theme_choice" -mesg "$msg"
+    local sp='<span font_family="JetBrainsMono Nerd Font,STCuKai-SC" weight="bold">'
+    local ep='</span>'
+    echo -e "${sp}${opt1}${ep}\n${sp}${opt2}${ep}" | rofi -dmenu -markup-rows -theme "$theme_choice" -mesg "${sp}${msg}${ep}"
 }
 
 # rofi 的输入框不支持输入法(IME),无法输入中文
 # 需要打字的地方统一改用 zenity --entry(GTK 原生支持 fcitx5)
+# XDG_CONFIG_HOME 指向插件自带的 gtkconfig,把对话框背景覆盖为 #1c1c1c
 input_text() {
     local prompt="$1"
-    zenity --entry --title "Todo" --text "$prompt" --width 420 2>/dev/null
+    XDG_CONFIG_HOME="$todo_dir/gtkconfig" zenity --entry --title "Todo" --text "$prompt" --width 420 2>/dev/null
 }
 
 # Generates a visually aligned list of tasks for Rofi using column + awk
@@ -28,7 +31,7 @@ generate_task_list_rofi() {
     local task_count
     task_count=$(jq '.tasks | length' "$json_file")
     if [[ "$task_count" -eq 0 ]]; then
-        echo '<tt>No tasks yet!</tt>'
+        echo '<span font_family="JetBrainsMono Nerd Font,STCuKai-SC" weight="bold">No tasks yet!</span>'
         return
     fi
 
@@ -70,22 +73,22 @@ generate_task_list_rofi() {
     BEGIN { 
 
     }
-    /^H/ { 
-        sub(/^H  /, ""); 
-        print "<tt><b>" $0 "</b></tt>"
-        next 
+    /^H/ {
+        sub(/^H  /, "");
+        print "<span font_family=\"JetBrainsMono Nerd Font,STCuKai-SC\" weight=\"bold\"><b>" $0 "</b></span>"
+        next
     }
-    /^P/ { 
-        sub(/^P  /, ""); 
-        print "<span foreground=\"" pc "\"><tt>" $0 "</tt></span>" 
+    /^P/ {
+        sub(/^P  /, "");
+        print "<span foreground=\"" pc "\"><span font_family=\"JetBrainsMono Nerd Font,STCuKai-SC\" weight=\"bold\">" $0 "</span></span>"
     }
-    /^C/ { 
-        sub(/^C  /, ""); 
-        print "<span foreground=\"" dc "\"><tt>" $0 "</tt></span>" 
+    /^C/ {
+        sub(/^C  /, "");
+        print "<span foreground=\"" dc "\"><span font_family=\"JetBrainsMono Nerd Font,STCuKai-SC\" weight=\"bold\">" $0 "</span></span>"
     }
     END {
         # Added padding at the bottom to prevent text cutoff
-        print "<tt> </tt>"
+        print "<span font_family=\"JetBrainsMono Nerd Font,STCuKai-SC\"> </span>"
     }
     '
 }
@@ -139,7 +142,7 @@ add_task_rofi() {
     if [[ -n "$conflict_desc" ]]; then
         local choice_str
         choice_str=$(rofi_choice "Priority $prio exists ('$conflict_desc'). Make '$desc' more prior?" "Yes" "No")
-        if [[ "$choice_str" == "Yes" ]]; then insert_mode="true"; else insert_mode="false"; fi
+        if [[ "$choice_str" == *"Yes"* ]]; then insert_mode="true"; else insert_mode="false"; fi
     else
         insert_mode="true"
     fi
@@ -173,7 +176,7 @@ toggle_status() {
 delete_all_tasks() {
     local choice_str
     choice_str=$(rofi_choice "Delete ALL tasks? Cannot be undone." "Yes" "No")
-    if [[ "$choice_str" == "Yes" ]]; then
+    if [[ "$choice_str" == *"Yes"* ]]; then
         jq '.tasks = []' "$json_file" >"$temp_file" && mv "$temp_file" "$json_file"
     fi
 }
@@ -181,7 +184,7 @@ delete_all_tasks() {
 delete_completed_tasks() {
     local choice_str
     choice_str=$(rofi_choice "Delete all COMPLETED tasks?" "Yes" "No")
-    if [[ "$choice_str" == "Yes" ]]; then
+    if [[ "$choice_str" == *"Yes"* ]]; then
         jq '.tasks |= map(select(.status == 0))' "$json_file" >"$temp_file" && mv "$temp_file" "$json_file"
     fi
 }
@@ -206,10 +209,10 @@ set_auto_delete() {
 
     local choice_str
     choice_str=$(rofi_choice "What to delete daily at $valid_time?" "Completed" "All")
-    if [[ "$choice_str" == "Completed" ]]; then
+    if [[ "$choice_str" == *"Completed"* && "$choice_str" != *"Delete"* ]]; then
         update_config "scheduled_time" "$valid_time"
         update_config "scheduled_action" "completed"
-    elif [[ "$choice_str" == "All" ]]; then
+    elif [[ "$choice_str" == *"All"* && "$choice_str" != *"Delete"* ]]; then
         update_config "scheduled_time" "$valid_time"
         update_config "scheduled_action" "all"
     fi
@@ -218,8 +221,8 @@ set_auto_delete() {
 set_middle_click() {
     local choice_str
     choice_str=$(rofi_choice "Middle-click Action" "Delete Completed" "Delete All")
-    if [[ "$choice_str" == "Delete Completed" ]]; then update_config "middle_click_action" "completed"; fi
-    if [[ "$choice_str" == "Delete All" ]]; then update_config "middle_click_action" "all"; fi
+    if [[ "$choice_str" == *"Delete Completed"* ]]; then update_config "middle_click_action" "completed"; fi
+    if [[ "$choice_str" == *"Delete All"* ]]; then update_config "middle_click_action" "all"; fi
 }
 
 settings_menu_rofi() {
@@ -231,29 +234,33 @@ settings_menu_rofi() {
         local m_action
         m_action=$(get_config "middle_click_action")
 
-        local msg="Settings"
+        local sp='<span font_family="JetBrainsMono Nerd Font,STCuKai-SC" weight="bold">'
+        local ep='</span>'
+        local msg="${sp}Settings${ep}"
         msg+=$'\n\n'
-        msg+="Auto-Delete: ${s_action} at ${s_time}"
+        msg+="${sp}Auto-Delete: ${s_action} at ${s_time}${ep}"
         msg+=$'\n'
-        msg+="Middle-Click: Deletes ${m_action} tasks"
+        msg+="${sp}Middle-Click: Deletes ${m_action} tasks${ep}"
         msg+=$'\n\n'
-        msg+='(1) Delete ALL tasks now'
+        msg+="${sp}(1) Delete ALL tasks now${ep}"
         msg+=$'\n'
-        msg+='(2) Delete COMPLETED tasks now'
+        msg+="${sp}(2) Delete COMPLETED tasks now${ep}"
         msg+=$'\n'
-        msg+='(3) Set daily auto-delete time'
+        msg+="${sp}(3) Set daily auto-delete time${ep}"
         msg+=$'\n'
-        msg+='(4) Configure middle-click action'
+        msg+="${sp}(4) Configure middle-click action${ep}"
+        msg+=$'\n\n'
+        msg+="${sp} Back${ep}"
 
         local choice
-        choice=$(echo " Back" | rofi -dmenu -theme "$theme_input2" -mesg "$msg")
+        choice=$(echo "${sp} Back${ep}" | rofi -dmenu -markup-rows -theme "$theme_input2" -mesg "$msg")
 
         case "$choice" in
-        1) delete_all_tasks ;;
-        2) delete_completed_tasks ;;
-        3) set_auto_delete ;;
-        4) set_middle_click ;;
-        " Back" | "") break ;;
+        *"(1)"*|1) delete_all_tasks ;;
+        *"(2)"*|2) delete_completed_tasks ;;
+        *"(3)"*|3) set_auto_delete ;;
+        *"(4)"*|4) set_middle_click ;;
+        *"Back"*|"") break ;;
         *) ;;
         esac
     done
@@ -264,11 +271,11 @@ settings_menu_rofi() {
 run_rofi_main() {
     ensure_json_exists
     while true; do
-        local view_header="Waybar Todo Manager"
+        local view_header="<span font_family=\"JetBrainsMono Nerd Font,STCuKai-SC\" weight=\"bold\">Waybar Todo Manager</span>"
         local view_tasks
         view_tasks=$(generate_task_list_rofi "false")
         local full_message="${view_header}"$'\n\n'"${view_tasks}"
-        local options="  Add Task\n  Toggle Status\n  Delete Task\n  Settings\n󰗼  Quit"
+        local options="<span font_family=\"JetBrainsMono Nerd Font,STCuKai-SC\" weight=\"bold\">  Add Task</span>\n<span font_family=\"JetBrainsMono Nerd Font,STCuKai-SC\" weight=\"bold\">  Toggle Status</span>\n<span font_family=\"JetBrainsMono Nerd Font,STCuKai-SC\" weight=\"bold\">  Delete Task</span>\n<span font_family=\"JetBrainsMono Nerd Font,STCuKai-SC\" weight=\"bold\">  Settings</span>\n<span font_family=\"JetBrainsMono Nerd Font,STCuKai-SC\" weight=\"bold\">󰗼  Quit</span>"
 
         local selection
         selection=$(echo -e "$options" | rofi -dmenu -i -theme "$theme_main" -mesg "$full_message" -markup-rows)
@@ -276,11 +283,11 @@ run_rofi_main() {
         if [[ -z "$selection" ]]; then break; fi
 
         case "$selection" in
-        *"Add Task") add_task_rofi ;;
-        *"Toggle Status") toggle_status ;;
-        *"Delete Task") delete_task ;;
-        *"Settings") settings_menu_rofi ;;
-        *"Quit") break ;;
+        *"Add Task"*) add_task_rofi ;;
+        *"Toggle Status"*) toggle_status ;;
+        *"Delete Task"*) delete_task ;;
+        *"Settings"*) settings_menu_rofi ;;
+        *"Quit"*) break ;;
         esac
     done
 }
