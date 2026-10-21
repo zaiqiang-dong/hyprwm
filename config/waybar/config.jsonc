@@ -149,10 +149,10 @@
     "spacing": 6,
     "tooltip": false,
     "orders": {
-      "nm-applet": 1,
-      "Fcitx": 2,
-      "blueman": 3,
-      "lark_status_icon_1": 4,
+      "lark_status_icon_1": 1,
+      "nm-applet": 98,
+      "Fcitx": 99,
+      "blueman": 100,
     },
   },
   "backlight": {
