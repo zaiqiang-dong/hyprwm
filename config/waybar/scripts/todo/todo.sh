@@ -137,46 +137,37 @@ generate_waybar_output() {
     local json_class=""
 
     local task_count=$(echo "$all_tasks_json" | jq 'length')
+    local pending_count=$(echo "$all_tasks_json" | jq '[.[] | select(.status == 0)] | length')
 
-    if [[ "$task_count" -eq 0 ]]; then
-        bar_text="\u2009\u2009Add a task!"
-        tooltip="Right-click to add a new task"
+    # bar text: pending/total counts (shown via { } in the waybar format)
+    bar_text="$pending_count/$task_count"
+    if [[ "$pending_count" -gt 0 ]]; then
+        json_class="pending"
     else
-        if [[ -n "$current_task_desc" ]]; then
-            local full_bar_text="\u2009$current_task_desc"
-            json_class="pending"
+        json_class="all-done"
+    fi
 
-            if ((${#full_bar_text} > 20)); then
-                bar_text="$(echo "\u2009$full_bar_text" | cut -c1-17)..."
-            else
-                bar_text="\u2009$full_bar_text"
-            fi
+    tooltip="<b><u>Todo List\n</u></b>\n"
+    local pending_tasks=""
+    local completed_tasks=""
+
+    while IFS=$'\t' read -r status desc; do
+        if [[ "$status" -eq 1 ]]; then
+            completed_tasks+="<span color='$done_color'> - <s>$desc</s></span>\n"
         else
-            bar_text="✔All Done!"
+            pending_tasks+="<span color='$pending_color'> - $desc</span>\n"
         fi
+    done < <(echo "$all_tasks_json" | jq -r '.[] | "\(.status)\t\(.description)"')
 
-        tooltip="<b><u>Todo List\n</u></b>\n"
-        local pending_tasks=""
-        local completed_tasks=""
+    tooltip+="<span color='$pending_color'>●</span> pending tasks\n"
+    tooltip+="$pending_tasks\n"
+    tooltip+="<span color='$done_color'>●</span> completed tasks\n"
+    tooltip+="$completed_tasks"
 
-        while IFS=$'\t' read -r status desc; do
-            if [[ "$status" -eq 1 ]]; then
-                completed_tasks+="<span color='$done_color'> - <s>$desc</s></span>\n"
-            else
-                pending_tasks+="<span color='$pending_color'> - $desc</span>\n"
-            fi
-        done < <(echo "$all_tasks_json" | jq -r '.[] | "\(.status)\t\(.description)"')
-
-        tooltip+="<span color='$pending_color'>●</span> pending tasks\n"
-        tooltip+="$pending_tasks\n"
-        tooltip+="<span color='$done_color'>●</span> completed tasks\n"
-        tooltip+="$completed_tasks"
-
-        if [[ -n "$current_task_desc" ]]; then
-            tooltip+="\n<b>Current task:</b> <span color='$pending_color'>$full_bar_text</span>"
-        else
-            tooltip+="\n<b>All tasks cleared. Great job!</b>"
-        fi
+    if [[ -n "$current_task_desc" ]]; then
+        tooltip+="\n<b>Current task:</b> <span color='$pending_color'>$current_task_desc</span>"
+    else
+        tooltip+="\n<b>All tasks cleared. Great job!</b>"
     fi
 
     local bar_text_json=$(echo "$bar_text" | sed 's/"/\\"/g')
