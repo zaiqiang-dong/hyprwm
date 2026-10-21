@@ -30,7 +30,7 @@ hl.bind(mainMod .. " + Tab", hl.dsp.exec_cmd("swaync-client -t -sw"))
 -- 剪贴板历史
 hl.bind(
 	"CTRL + SHIFT + v",
-	hl.dsp.exec_cmd('cliphist list | rofi -dmenu -i -window-title "🐕‍🦺"| cliphist decode | wl-copy')
+	hl.dsp.exec_cmd('cliphist list | env -u WAYLAND_DISPLAY XMODIFIERS=@im=fcitx rofi -dpi 192 -theme-str "window { padding: 60; } mainbox { padding: 12; } inputbar { padding: 16px; } listview { spacing: 8px; padding: 10px 10px 0px 10px; } element { padding: 12px 20px; } element-text { margin: 0px 0px 0px 16px; }" -dmenu -i -window-title "🐕‍🦺"| cliphist decode | wl-copy')
 )
 
 -- 终端
