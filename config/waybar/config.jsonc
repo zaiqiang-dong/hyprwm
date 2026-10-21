@@ -148,6 +148,12 @@
     "icon-size": 16,
     "spacing": 6,
     "tooltip": false,
+    "orders": {
+      "nm-applet": 1,
+      "Fcitx": 2,
+      "blueman": 3,
+      "lark_status_icon_1": 4
+    }
   },
   "backlight": {
     "device": "intel_backlight",
