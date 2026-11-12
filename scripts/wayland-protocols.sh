@@ -2,7 +2,7 @@
 
 sudo apt install -y --quiet meson ninja-build pkg-config libwayland-dev git
 
-VERSION="${1:-1.49}"
+VERSION="${1:-1.50}"
 PREFIX="/usr"
 
 git clone https://gitlab.freedesktop.org/wayland/wayland-protocols.git

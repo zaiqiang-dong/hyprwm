@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-tag=v0.15.0
+tag=0.16.0
 git clone https://github.com/Alexays/Waybar
 cd Waybar
 git checkout $tag

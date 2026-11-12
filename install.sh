@@ -149,6 +149,7 @@ sudo apt-get install -y libpipewire-0.3-dev
 sudo apt-get install -y playerctl
 sudo apt-get install -y libinotify-ocaml-dev
 sudo apt-get install -y libeis-dev
+sudo apt-get install -y libcanberra-dev
 
 
 ./scripts/wayland-scanner.sh
