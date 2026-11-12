@@ -55,6 +55,17 @@ hl.bind(mainMod .. " + 0", hl.dsp.focus({ workspace = 10 }))
 hl.bind("CTRL + SHIFT + W", hl.dsp.window.close())
 hl.bind("CTRL + SHIFT + F", hl.dsp.window.fullscreen({ mode = "maximized" }))
 
+-- 触摸板开关
+-- hl.device 运行时立即生效（detach/attach 指针设备）；无内置查询接口，用 Lua 变量记账。
+-- 注意：reload 会清空 device 配置并重建 Lua 状态，触摸板恢复默认启用，与该变量初值一致。
+-- 设备名以 `hyprctl devices` 输出为准（原始名 SynPS/2 Synaptics TouchPad）。
+local touchpad = "synps/2-synaptics-touchpad"
+local touchpad_enabled = true
+hl.bind("CTRL + SHIFT + ALT + t", function()
+	touchpad_enabled = not touchpad_enabled
+	hl.device({ name = touchpad, enabled = touchpad_enabled })
+end)
+
 -- 系统操作
 -- 锁屏 10 秒后关屏；锁屏期间被唤醒但 20 秒内未解锁则再次关屏，直到解锁退出监视
 -- 注意：0.55+ 中 hyprctl dispatch 参数按 Lua 解析，dpms 必须用 hyprctl eval 走 hl.dsp
