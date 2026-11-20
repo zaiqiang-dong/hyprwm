@@ -153,3 +153,12 @@ hl.window_rule({
     match = { class = "^(wechat)$" },
     workspace = "9 silent",
 })
+
+
+hl.window_rule({
+    name = "windowrule-17-1",
+    match = { class = "^(wechat)$", initial_title = "^(图片和视频)$" },
+    float = true,
+    center = true,
+    workspace = "9 silent",
+})
