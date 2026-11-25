@@ -80,6 +80,7 @@ hl.window_rule({
     -- move = "50%-184 50%-77",
     workspace = "12",
     no_initial_focus = true,
+    suppress_event = "x11configurerequest",  -- 拦截飞书会议自己的 X11 定位请求
 })
 
 -- KDE portal → float
