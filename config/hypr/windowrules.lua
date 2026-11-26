@@ -1,5 +1,10 @@
 -- 窗口规则
 
+hl.window_rule({
+    name = "windowrule-0",
+    match = { class = "" },
+		float = 1,
+})
 -- clash-verge → workspace 11
 hl.window_rule({
     name = "windowrule-1",
@@ -67,19 +72,30 @@ hl.window_rule({
     float = true,
     center = true,
     workspace = "12",
-    no_initial_focus = true,
+    -- no_initial_focus = true,
+    suppress_event = "x11configurerequest",  -- 拦截飞书会议自己的 X11 定位请求
 })
 
 -- Meeting → float, workspace 12
 hl.window_rule({
     name = "windowrule-8-1",
-    match = { class = "^(Meeting)$" },
+    match = { class = "^(Meeting)$"},
     float = true,
     center = true,
-    -- size = "368 154",
-    -- move = "50%-184 50%-77",
     workspace = "12",
-    no_initial_focus = true,
+    -- no_initial_focus = true,
+    suppress_event = "x11configurerequest",  -- 拦截飞书会议自己的 X11 定位请求
+})
+
+-- 飞书会议主窗 → float, workspace 12
+-- 该窗口不设置 WM_CLASS（class 为空，xprop 查无 WM_CLASS），只有 title，故按 title + 空 class 匹配
+hl.window_rule({
+    name = "windowrule-8-2",
+    match = { title = "^(飞书会议)$", class = "^$" },
+    float = true,
+    -- center = true,
+    workspace = "12",
+    -- no_initial_focus = true,
     suppress_event = "x11configurerequest",  -- 拦截飞书会议自己的 X11 定位请求
 })
 
