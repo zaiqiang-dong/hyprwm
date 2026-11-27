@@ -63,6 +63,8 @@ hl.window_rule({
     match = { title = "^(wpp)$" },
     float = true,
     center = false,
+    no_focus = true,  -- WPS 字体下拉列表：阻止其获得焦点，
+                      -- 否则鼠标一动焦点跳回主窗口，列表因失焦被 WPS 关闭
 })
 
 -- 飞书会议 → float, workspace 12
