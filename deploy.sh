@@ -47,19 +47,3 @@ ln -s ~/.local/share/themes/Catppuccin-Green-Dark/gtk-4.0 ~/.config/gtk-4.0
 # 还原工作区改动
 git checkout .
 git clean -df
-
-# GTK / GNOME 外观设置
-gsettings set org.gnome.desktop.interface gtk-theme "Catppuccin-Green-Dark"
-gsettings set org.gnome.desktop.interface icon-theme "Papirus-Dark"
-gsettings set org.gnome.desktop.interface font-name "JetBrainsMono Nerd Font Bold 13"
-gsettings set org.gnome.desktop.interface cursor-theme "Adwaita"
-gsettings set org.gnome.desktop.interface cursor-size "24"
-gsettings set org.gnome.desktop.interface toolbar-style "both-horiz"
-gsettings set org.gnome.desktop.interface toolbar-icons-size "large"
-gsettings set org.gnome.desktop.interface font-hinting "slight"
-gsettings set org.gnome.desktop.interface font-antialiasing "grayscale"
-gsettings set org.gnome.desktop.interface font-rgba-order "rgb"
-gsettings set org.gnome.desktop.interface text-scaling-factor "1.0"
-gsettings set org.gnome.desktop.interface color-scheme "prefer-light"
-gsettings set org.gnome.desktop.interface event-sounds "true"
-gsettings set org.gnome.desktop.interface input-feedback-sounds "true"
