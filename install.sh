@@ -327,4 +327,4 @@ gsettings set org.gnome.desktop.interface color-scheme "prefer-light"
 gsettings set org.gnome.desktop.interface event-sounds "true"
 gsettings set org.gnome.desktop.interface input-feedback-sounds "true"
 
-./deploy.sh
+./sync.sh deploy
